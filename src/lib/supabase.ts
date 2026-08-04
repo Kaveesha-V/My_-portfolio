@@ -85,7 +85,21 @@ export async function getExperience(): Promise<Experience[]> {
     try {
       const { data, error } = await supabase.from('experience').select('*');
       if (!error && data && data.length > 0) {
-        return data as Experience[];
+        return data.map((item) => {
+          const mockMatch = MOCK_EXPERIENCE.find((m) => m.id === item.id || m.role === item.role || m.company === item.company);
+          return {
+            id: item.id,
+            company: item.company,
+            role: item.role,
+            period: item.period,
+            location: item.location,
+            description: item.description,
+            bulletPoints: item.bullet_points || item.bulletPoints || mockMatch?.bulletPoints || [],
+            techUsed: item.tech_used || item.techUsed || mockMatch?.techUsed || [],
+            current: item.current,
+            driveUrl: item.drive_url || item.driveUrl || mockMatch?.driveUrl,
+          };
+        }) as Experience[];
       }
     } catch (e) {
       console.warn('Supabase experience fetch failed:', e);
