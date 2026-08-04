@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { AnimatedSection } from '../common/AnimatedSection';
 import type { Profile } from '../../types';
-import { Zap, Code2, MapPin, Mail, Sparkles, BookOpen, Palette } from 'lucide-react';
+import { Zap, Code2, MapPin, Mail, Sparkles, BookOpen, Palette, GraduationCap } from 'lucide-react';
 
 interface AboutProps {
   profile: Profile;
@@ -55,6 +55,15 @@ export const About: React.FC<AboutProps> = ({ profile }) => {
                     <Sparkles className="w-3.5 h-3.5 text-purple-400" />
                     IT Student
                   </span>
+                </div>
+              </div>
+
+              {/* Education Highlight Badge */}
+              <div className="mb-4 p-3 rounded-xl bg-purple-950/30 border border-purple-500/20 flex items-center gap-2.5">
+                <GraduationCap className="w-5 h-5 text-purple-400 shrink-0" />
+                <div className="flex flex-col">
+                  <span className="text-xs font-bold text-white">University of Kelaniya</span>
+                  <span className="text-[11px] font-mono-code text-purple-300">BSc (Hons) in IT — Industrial Management</span>
                 </div>
               </div>
 
