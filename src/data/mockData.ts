@@ -141,7 +141,7 @@ export const MOCK_PROJECTS: Project[] = [
   {
     id: 'proj-6',
     title: 'Portfolio Website',
-    description: 'Personal Portfolio Web Application',
+    description: 'Developed responsive, scalable web applications featuring clean visual design, intuitive user interfaces, and optimized cross-device performance.',
     longDescription: 'Detail-oriented developer skilled in building responsive, scalable web applications with clean visual design and optimal user experience.',
     tags: ['CSS', 'React', 'git', 'Vercel', 'deno'],
     category: 'Web',
@@ -319,36 +319,36 @@ export const MOCK_CERTIFICATIONS: Certification[] = [
     id: 'cert-1',
     title: 'Cybersecurity Fundamentals & Network Security',
     issuer: 'Professional Certification / Online Platform',
-    date: '2025',
     category: 'Cyber Security',
     description: 'Specialized training in network security principles, threat analysis, vulnerability assessment, and defensive security strategies.',
-    skills: ['Network Security', 'Vulnerability Assessment', 'Threat Analysis', 'Cybersecurity']
+    skills: ['Network Security', 'Vulnerability Assessment', 'Threat Analysis', 'Cybersecurity'],
+    linkedinUrl: 'https://www.linkedin.com/in/your-profile/'
   },
   {
     id: 'cert-2',
     title: 'Full Stack Web Development & Modern Frameworks',
     issuer: 'University of Kelaniya & Online Courses',
-    date: '2025',
     category: 'Web Development',
     description: 'Comprehensive certification covering HTML5, CSS3, JavaScript ES6+, React, Node.js backend integration, and responsive web design.',
-    skills: ['React', 'HTML/CSS', 'JavaScript', 'Responsive Web Design', 'REST APIs']
+    skills: ['React', 'HTML/CSS', 'JavaScript', 'Responsive Web Design', 'REST APIs'],
+    linkedinUrl: 'https://www.linkedin.com/in/your-profile/'
   },
   {
     id: 'cert-3',
     title: 'Object-Oriented Programming (Java & C++)',
     issuer: 'University of Kelaniya (IT Department)',
-    date: '2024 — 2025',
     category: 'Programming',
     description: 'In-depth coursework and practical projects focused on Object-Oriented Programming logic, algorithms, memory management, and game logic.',
-    skills: ['Java', 'C++', 'OOP', 'Data Structures', 'Raylib']
+    skills: ['Java', 'C++', 'OOP', 'Data Structures', 'Raylib'],
+    linkedinUrl: 'https://www.linkedin.com/in/your-profile/'
   },
   {
     id: 'cert-4',
     title: 'Graphic Design & Video Editing Masterclass',
     issuer: 'Canva Pro & Adobe Creative Suite Training',
-    date: '2024 — Present',
     category: 'Design & Creative',
     description: 'Advanced practical certification in visual media composition, branding banner design, poster design, motion graphic edits using Photoshop & After Effects.',
-    skills: ['Adobe Photoshop', 'After Effects', 'Illustrator', 'Canva Pro', 'Motion Video']
+    skills: ['Adobe Photoshop', 'After Effects', 'Illustrator', 'Canva Pro', 'Motion Video'],
+    linkedinUrl: 'https://www.linkedin.com/in/your-profile/'
   }
 ];

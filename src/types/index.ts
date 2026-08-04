@@ -94,9 +94,10 @@ export interface Certification {
   id: string;
   title: string;
   issuer: string;
-  date: string;
+  date?: string;
   category?: 'Cyber Security' | 'Web Development' | 'Programming' | 'Design & Creative';
   credentialUrl?: string;
+  linkedinUrl?: string;
   skills?: string[];
   description?: string;
 }
