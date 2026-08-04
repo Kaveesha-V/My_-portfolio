@@ -317,38 +317,38 @@ export const STARTER_QUESTIONS = [
 export const MOCK_CERTIFICATIONS: Certification[] = [
   {
     id: 'cert-1',
-    title: 'Cybersecurity Fundamentals & Network Security',
-    issuer: 'Professional Certification / Online Platform',
+    title: 'Foundation of Cyber Security',
+    issuer: 'Google Certification | Online Platform',
     category: 'Cyber Security',
-    description: 'Specialized training in network security principles, threat analysis, vulnerability assessment, and defensive security strategies.',
-    skills: ['Network Security', 'Vulnerability Assessment', 'Threat Analysis', 'Cybersecurity'],
-    linkedinUrl: 'https://www.linkedin.com/in/your-profile/'
+    description: 'Foundations of Cybersecurity is the first course in the broader Google Cybersecurity Professional Certificate program (offered on platforms like Coursera and Google Skills).',
+    skills: ['Google', 'Vulnerability Assessment', 'Threat Analysis', 'Cybersecurity'],
+    linkedinUrl: 'https://www.linkedin.com/posts/kaveesha-vimukthi-544a08352_cybersecurity-googlecareercertificate-continuouslearning-share-7422137251905744896-5GCK/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFgSEQQBvRaW62XqDS_eO6qA68JHJKsucIg'
   },
   {
     id: 'cert-2',
-    title: 'Full Stack Web Development & Modern Frameworks',
-    issuer: 'University of Kelaniya & Online Courses',
-    category: 'Web Development',
-    description: 'Comprehensive certification covering HTML5, CSS3, JavaScript ES6+, React, Node.js backend integration, and responsive web design.',
-    skills: ['React', 'HTML/CSS', 'JavaScript', 'Responsive Web Design', 'REST APIs'],
-    linkedinUrl: 'https://www.linkedin.com/in/your-profile/'
+    title: 'Play it safe : Manage Security Risks',
+    issuer: 'Google Certification | Online Platform',
+    category: 'Cyber Security',
+    description: 'Play It Safe: Manage Security Risks is the second course in the Google Cybersecurity Certificate. It builds directly on the introductory concepts from Course 1, diving deeper into how organizations identify, evaluate, and mitigate threats to protect their operations',
+    skills: ['Google', 'Vulnerability Assessment', 'Threat Analysis', 'Cybersecurity'],
+    linkedinUrl: 'https://www.linkedin.com/posts/kaveesha-vimukthi-544a08352_completion-certificate-for-play-it-safe-share-7425955417534431232-KQc2/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFgSEQQBvRaW62XqDS_eO6qA68JHJKsucIg'
   },
   {
     id: 'cert-3',
-    title: 'Object-Oriented Programming (Java & C++)',
-    issuer: 'University of Kelaniya (IT Department)',
+    title: 'Programming for Everybody phase 1',
+    issuer: 'University of Michigan | Online Platform',
     category: 'Programming',
-    description: 'In-depth coursework and practical projects focused on Object-Oriented Programming logic, algorithms, memory management, and game logic.',
-    skills: ['Java', 'C++', 'OOP', 'Data Structures', 'Raylib'],
-    linkedinUrl: 'https://www.linkedin.com/in/your-profile/'
+    description: 'This introductory Python course is the first step in the Python for Everybody Specialization (now known as the Python 3 Programming Specialization). It is designed for absolute beginners with no prior programming experience. The course focuses on the fundamentals of procedural programming using Python and takes learners from zero knowledge to being able to write simple scripts to process data.',
+    skills: ['Python', 'Programming'],
+    linkedinUrl: 'https://www.linkedin.com/posts/kaveesha-vimukthi-544a08352_python-programming-continuouslearning-share-7428849625417281536-_VBi/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFgSEQQBvRaW62XqDS_eO6qA68JHJKsucIg'
   },
   {
     id: 'cert-4',
-    title: 'Graphic Design & Video Editing Masterclass',
-    issuer: 'Canva Pro & Adobe Creative Suite Training',
-    category: 'Design & Creative',
-    description: 'Advanced practical certification in visual media composition, branding banner design, poster design, motion graphic edits using Photoshop & After Effects.',
-    skills: ['Adobe Photoshop', 'After Effects', 'Illustrator', 'Canva Pro', 'Motion Video'],
+    title: 'Connect and Protect: Networks and Network Security',
+    issuer: 'Google Certification | Online Platform',
+    category: 'Cyber Security',
+    description: 'Connect and Protect: Networks and Network Security is the third course in the Google Cybersecurity Professional Certificate program. This course builds on the foundation established in the first two courses to equip learners with the knowledge and skills needed to design, implement, and manage secure network environments',
+    skills: ['Google', 'Vulnerability Assessment', 'Threat Analysis', 'Cybersecurity'],
     linkedinUrl: 'https://www.linkedin.com/in/your-profile/'
   }
 ];
