@@ -137,7 +137,22 @@ export const MOCK_PROJECTS: Project[] = [
       'Cross-device compatibility and screen size responsiveness'
     ],
     metrics: '⚡ Scalable & Responsive Web Interface'
-  }
+  },
+  {
+    id: 'proj-6',
+    title: 'Portfolio Website',
+    description: 'Personal Portfolio Web Application',
+    longDescription: 'Detail-oriented developer skilled in building responsive, scalable web applications with clean visual design and optimal user experience.',
+    tags: ['CSS', 'React', 'git', 'Vercel', 'deno'],
+    category: 'Web',
+    imageUrl: '/portfolio-screenshot.png',
+    featured: false,
+    architectureHighlights: ['Modern dark-mode UI layout featuring custom gradient typography, glowing CTA elements, and dynamic floating stats cards',
+      'Integrated interactive AI Assistant chatbot widget with dedicated header status and floating action access',
+      'Modular component structure with single-page section navigation and real-time availability status badge'],
+    metrics: '⚡ Live Interactive AI Assistant & Modern Component Architecture'
+  },
+
 ];
 
 export const MOCK_EXPERIENCE: Experience[] = [
