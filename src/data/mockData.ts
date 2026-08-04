@@ -147,9 +147,11 @@ export const MOCK_PROJECTS: Project[] = [
     category: 'Web',
     imageUrl: '/portfolio-screenshot.png',
     featured: false,
-    architectureHighlights: ['Modern dark-mode UI layout featuring custom gradient typography, glowing CTA elements, and dynamic floating stats cards',
+    architectureHighlights: [
+      'Modern dark-mode UI layout featuring custom gradient typography, glowing CTA elements, and dynamic floating stats cards',
       'Integrated interactive AI Assistant chatbot widget with dedicated header status and floating action access',
-      'Modular component structure with single-page section navigation and real-time availability status badge'],
+      'Modular component structure with single-page section navigation and real-time availability status badge'
+    ],
     metrics: '⚡ Live Interactive AI Assistant & Modern Component Architecture'
   },
 
