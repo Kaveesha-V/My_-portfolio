@@ -170,7 +170,7 @@ export const MOCK_EXPERIENCE: Experience[] = [
     ],
     techUsed: ['Photoshop', 'After Effects', 'Illustrator', 'Canva Pro', 'Video Editing', 'Graphic Design'],
     current: true,
-    driveUrl: 'https://drive.google.com/drive/folders/YOUR_GOOGLE_DRIVE_FOLDER_ID'
+    driveUrl: 'https://bit.ly/4yRuaKp'
   }
 ];
 
