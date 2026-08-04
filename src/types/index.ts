@@ -10,7 +10,7 @@ export interface Profile {
   socials: {
     github: string;
     linkedin: string;
-    twitter?: string;
+    whatsapp?: string;
     email: string;
   };
   stats: {

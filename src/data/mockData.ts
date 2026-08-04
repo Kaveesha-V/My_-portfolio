@@ -16,9 +16,9 @@ export const MOCK_PROFILE: Profile = {
   location: "Kelaniya, Sri Lanka(Open to Remote)",
   email: "kaveeshavimukthi688@gmail.com",
   socials: {
-    github: "https://github.com",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    github: "https://github.com/Kaveesha-V",
+    linkedin: "https://www.linkedin.com/in/kaveesha-vimukthi-544a08352",
+    whatsapp: "https://wa.me/94765502806",
     email: "mailto:kaveeshavimukthi688@gmail.com"
   },
   stats: {
