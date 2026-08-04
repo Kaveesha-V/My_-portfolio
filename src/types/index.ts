@@ -59,6 +59,7 @@ export interface Experience {
   bulletPoints: string[];
   techUsed: string[];
   current?: boolean;
+  driveUrl?: string;
 }
 
 export interface ContactMessage {

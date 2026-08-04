@@ -14,9 +14,6 @@ import type { Profile, Project, Skill, Experience } from './types';
 import { Bot } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-import { Samples } from './components/sections/Samples';
-import { MOCK_SAMPLES } from './data/mockData';
-
 export function App() {
   const [profile, setProfile] = useState<Profile | null>(null);
   const [projects, setProjects] = useState<Project[]>([]);
@@ -77,7 +74,6 @@ export function App() {
         <Skills skills={skills} />
         <Projects projects={projects} />
         <Timeline experiences={experiences} />
-        <Samples samples={MOCK_SAMPLES} />
         <Contact profile={profile} />
       </main>
 

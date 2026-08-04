@@ -169,7 +169,8 @@ export const MOCK_EXPERIENCE: Experience[] = [
       'Collaborated with clients to translate visual concepts into engaging multimedia assets.'
     ],
     techUsed: ['Photoshop', 'After Effects', 'Illustrator', 'Canva Pro', 'Video Editing', 'Graphic Design'],
-    current: true
+    current: true,
+    driveUrl: 'https://drive.google.com/drive/folders/YOUR_GOOGLE_DRIVE_FOLDER_ID'
   }
 ];
 

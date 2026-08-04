@@ -1,5 +1,17 @@
 {
+  "functions": {
+    "api/chat.ts": {
+      "runtime": "edge"
+    }
+  },
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/api/chat",
+      "destination": "/api/chat.ts"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }

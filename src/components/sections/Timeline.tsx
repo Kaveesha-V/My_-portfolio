@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { AnimatedSection } from '../common/AnimatedSection';
 import type { Experience } from '../../types';
-import { Briefcase, Calendar, MapPin, ChevronRight } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, ChevronRight, Folder, ExternalLink } from 'lucide-react';
 
 interface TimelineProps {
   experiences: Experience[];
@@ -22,7 +22,7 @@ export const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
             Professional <span className="text-gradient-purple">Experience</span>
           </h2>
           <p className="text-sm text-slate-400 max-w-xl mt-3">
-            Track record of technical leadership, feature execution, and infrastructure optimization.
+            Track record of technical leadership, feature execution, and graphic design work.
           </p>
           <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-cyan-400 rounded-full mt-4" />
         </div>
@@ -99,6 +99,22 @@ export const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
                     </span>
                   ))}
                 </div>
+
+                {/* Google Drive Works Link */}
+                {exp.driveUrl && (
+                  <div className="mt-5 pt-4 border-t border-white/10 flex items-center">
+                    <a
+                      href={exp.driveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2.5 px-4 py-2.5 text-xs font-semibold rounded-xl bg-gradient-to-r from-purple-600/30 to-cyan-500/30 hover:from-purple-600/50 hover:to-cyan-500/50 text-cyan-300 border border-cyan-500/40 hover:border-cyan-400 shadow-md shadow-cyan-500/10 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                    >
+                      <Folder className="w-4 h-4 text-cyan-400 fill-cyan-400/20" />
+                      <span>View Graphic Design & Video Works on Google Drive</span>
+                      <ExternalLink className="w-3.5 h-3.5 ml-1 text-slate-400" />
+                    </a>
+                  </div>
+                )}
 
               </div>
             </motion.div>
