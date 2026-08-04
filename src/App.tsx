@@ -9,8 +9,9 @@ import { Timeline } from './components/sections/Timeline';
 import { Contact } from './components/sections/Contact';
 import { Footer } from './components/sections/Footer';
 import { ChatWidget } from './components/chat/ChatWidget';
-import { getProfile, getProjects, getSkills, getExperience } from './lib/supabase';
-import type { Profile, Project, Skill, Experience } from './types';
+import { Qualifications } from './components/sections/Qualifications';
+import { getProfile, getProjects, getSkills, getExperience, getCertifications } from './lib/supabase';
+import type { Profile, Project, Skill, Experience, Certification } from './types';
 import { Bot } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -19,22 +20,25 @@ export function App() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [skills, setSkills] = useState<Skill[]>([]);
   const [experiences, setExperiences] = useState<Experience[]>([]);
+  const [certifications, setCertifications] = useState<Certification[]>([]);
   const [chatOpen, setChatOpen] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadData() {
       try {
-        const [profData, projData, skillData, expData] = await Promise.all([
+        const [profData, projData, skillData, expData, certData] = await Promise.all([
           getProfile(),
           getProjects(),
           getSkills(),
           getExperience(),
+          getCertifications(),
         ]);
         setProfile(profData);
         setProjects(projData);
         setSkills(skillData);
         setExperiences(expData);
+        setCertifications(certData);
       } catch (err) {
         console.error('Error loading portfolio data:', err);
       } finally {
@@ -74,6 +78,7 @@ export function App() {
         <Skills skills={skills} />
         <Projects projects={projects} />
         <Timeline experiences={experiences} />
+        <Qualifications certifications={certifications} />
         <Contact profile={profile} />
       </main>
 

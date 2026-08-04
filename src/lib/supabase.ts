@@ -1,6 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
-import { MOCK_PROFILE, MOCK_PROJECTS, MOCK_SKILLS, MOCK_EXPERIENCE } from '../data/mockData';
-import type { Profile, Project, Skill, Experience, ContactMessage, ChatMessage } from '../types';
+import { MOCK_PROFILE, MOCK_PROJECTS, MOCK_SKILLS, MOCK_EXPERIENCE, MOCK_CERTIFICATIONS } from '../data/mockData';
+import type { Profile, Project, Skill, Experience, ContactMessage, ChatMessage, Certification } from '../types';
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
@@ -106,6 +106,20 @@ export async function getExperience(): Promise<Experience[]> {
     }
   }
   return MOCK_EXPERIENCE;
+}
+
+export async function getCertifications(): Promise<Certification[]> {
+  if (supabase) {
+    try {
+      const { data, error } = await supabase.from('certifications').select('*');
+      if (!error && data && data.length > 0) {
+        return data as Certification[];
+      }
+    } catch (e) {
+      console.warn('Supabase certifications fetch failed:', e);
+    }
+  }
+  return MOCK_CERTIFICATIONS;
 }
 
 export async function sendContactMessage(msg: ContactMessage): Promise<{ success: boolean; error?: string }> {

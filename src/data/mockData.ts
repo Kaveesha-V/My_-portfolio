@@ -1,4 +1,4 @@
-import type { Profile, Skill, Project, Experience, SampleItem } from '../types';
+import type { Profile, Skill, Project, Experience, SampleItem, Certification } from '../types';
 
 export const MOCK_PROFILE: Profile = {
   name: "Kaveesha Vimukthi",
@@ -292,6 +292,46 @@ export const MOCK_SAMPLES: SampleItem[] = [
 export const STARTER_QUESTIONS = [
   "What projects has Kaveesha built recently?",
   "What is Kaveesha's tech stack and design skills?",
+  "What certifications and qualifications does Kaveesha hold?",
   "Can you summarize his work experience?",
   "How can I contact Kaveesha for graphic design or tech roles?"
+];
+
+export const MOCK_CERTIFICATIONS: Certification[] = [
+  {
+    id: 'cert-1',
+    title: 'Cybersecurity Fundamentals & Network Security',
+    issuer: 'Professional Certification / Online Platform',
+    date: '2025',
+    category: 'Cyber Security',
+    description: 'Specialized training in network security principles, threat analysis, vulnerability assessment, and defensive security strategies.',
+    skills: ['Network Security', 'Vulnerability Assessment', 'Threat Analysis', 'Cybersecurity']
+  },
+  {
+    id: 'cert-2',
+    title: 'Full Stack Web Development & Modern Frameworks',
+    issuer: 'University of Kelaniya & Online Courses',
+    date: '2025',
+    category: 'Web Development',
+    description: 'Comprehensive certification covering HTML5, CSS3, JavaScript ES6+, React, Node.js backend integration, and responsive web design.',
+    skills: ['React', 'HTML/CSS', 'JavaScript', 'Responsive Web Design', 'REST APIs']
+  },
+  {
+    id: 'cert-3',
+    title: 'Object-Oriented Programming (Java & C++)',
+    issuer: 'University of Kelaniya (IT Department)',
+    date: '2024 — 2025',
+    category: 'Programming',
+    description: 'In-depth coursework and practical projects focused on Object-Oriented Programming logic, algorithms, memory management, and game logic.',
+    skills: ['Java', 'C++', 'OOP', 'Data Structures', 'Raylib']
+  },
+  {
+    id: 'cert-4',
+    title: 'Graphic Design & Video Editing Masterclass',
+    issuer: 'Canva Pro & Adobe Creative Suite Training',
+    date: '2024 — Present',
+    category: 'Design & Creative',
+    description: 'Advanced practical certification in visual media composition, branding banner design, poster design, motion graphic edits using Photoshop & After Effects.',
+    skills: ['Adobe Photoshop', 'After Effects', 'Illustrator', 'Canva Pro', 'Motion Video']
+  }
 ];

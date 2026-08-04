@@ -16,6 +16,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat }) => {
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
+    { name: 'Qualifications', href: '#qualifications' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -23,7 +24,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat }) => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      const sections = ['hero', 'about', 'skills', 'projects', 'experience', 'contact'];
+      const sections = ['hero', 'about', 'skills', 'projects', 'experience', 'qualifications', 'contact'];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
