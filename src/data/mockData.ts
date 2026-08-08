@@ -24,7 +24,7 @@ export const MOCK_PROFILE: Profile = {
   stats: {
     yearsExperience: 1,
     projectsCompleted: 5,
-    techStackCount: 18,
+    techStackCount: 19,
     codeCommits: 100
   }
 };
@@ -42,11 +42,12 @@ export const MOCK_SKILLS: Skill[] = [
   { id: '7', name: 'C++ (Still Learning)', category: 'Programming Languages', level: 65, icon: 'Terminal', description: 'System-level programming concepts, memory management, core algorithms, and game logic' },
   { id: '8', name: 'Python (Still Learning)', category: 'Programming Languages', level: 72, icon: 'Terminal', description: 'Scripting, automation logic, data processing, and basic AI/ML exploration' },
 
-  // Databases & Tools
+  // Databases & Systems
   { id: '9', name: 'SQL (Still Learning)', category: 'Databases & Tools', level: 75, icon: 'Database', description: 'Relational database design, SQL queries, table joins, and database management' },
-  { id: '10', name: 'PostgreSQL', category: 'Databases & Tools', level: 78, icon: 'Database', description: 'Relational schema design, queries, table indexing, and structured data storage' },
-  { id: '11', name: 'MySQL', category: 'Databases & Tools', level: 78, icon: 'Database', description: 'Relational database administration, queries, indexes, and database design' },
-  { id: '12', name: 'Antigravity', category: 'Databases & Tools', level: 90, icon: 'Bot', description: 'Advanced AI coding assistant environment, prompt engineering, and agentic workflows' },
+  { id: '10', name: 'PostgreSQL', category: 'Databases & Tools', level: 78, icon: 'Database', description: 'Relational schema design, complex queries, table indexing, and structured data storage' },
+  { id: '11', name: 'MySQL Database', category: 'Databases & Tools', level: 80, icon: 'Database', description: 'Relational database administration, SQL queries, table indexing, and structured database design' },
+  { id: '12', name: 'Linux (Still Learning)', category: 'Databases & Tools', level: 70, icon: 'Terminal', description: 'Linux CLI commands, bash shell scripting, system permissions, and server environment navigation' },
+  { id: '19', name: 'Antigravity', category: 'Databases & Tools', level: 90, icon: 'Bot', description: 'Advanced AI coding assistant environment, prompt engineering, and agentic workflows' },
 
   // Design & Creative
   { id: '13', name: 'Adobe Photoshop', category: 'Design & Creative', level: 90, icon: 'Palette', description: 'Photo editing, digital artwork, raster graphic composition, and UI asset creation' },
