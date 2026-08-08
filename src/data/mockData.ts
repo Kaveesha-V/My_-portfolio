@@ -79,7 +79,7 @@ export const MOCK_PROJECTS: Project[] = [
   {
     id: 'proj-2',
     title: 'Movies & Games Review Platform',
-    description: 'Unified media tracking platform with live TMDb & Steam data, custom Watched/Backlog lists, and upcoming BNPL wishlist purchasing.',
+    description: 'Unified tracker with live TMDb & Steam APIs, custom Watched/Completed and Unwatched/Backlog lists, plus a Buy Now, Pay Later (BNPL) wishlist payment roadmap!',
     longDescription: 'A unified platform created to track and organize personal media libraries into custom "Watched/Completed" and "Unwatched/Backlog" lists for both movies and video games using live data from TMDb and Steam APIs. In future updates, BNPL (Buy Now, Pay Later) payment integration will allow gamers to purchase games from their wishlist in flexible installments.',
     tags: ['React', 'TMDb API', 'Steam API', 'BNPL Roadmap', 'UI/UX Design'],
     category: 'Web',

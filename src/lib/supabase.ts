@@ -195,7 +195,7 @@ export async function sendChatMessage(
   if (query.includes('project') || query.includes('work') || query.includes('built') || query.includes('showcase')) {
     return `Kaveesha has built several software & game projects:
 • **Fertilizer Shop Management System**: Full-stack system managing inventory, stock levels, sales, and customer invoicing (1-year ongoing project).
-• **Movies & Games Review Website**: Interactive review platform for movies and games built as a leisure-time passion project.
+• **Movies & Games Review Platform**: Unified tracker with live TMDb & Steam APIs, custom Watched/Completed and Unwatched/Backlog lists, plus a Buy Now, Pay Later (BNPL) wishlist payment roadmap!
 • **2D Game Development (Raylib)**: 2D game built in C++ leveraging the Raylib graphics engine.
 • **Online Book Shop Management System**: Java & SQL management system for bookstore operations.
 • **Responsive Web Applications**: Scalable web apps built with HTML, CSS, JavaScript, and React.
