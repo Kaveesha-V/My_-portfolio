@@ -2,10 +2,10 @@ import type { Profile, Skill, Project, Experience, SampleItem, Certification } f
 
 export const MOCK_PROFILE: Profile = {
   name: "Kaveesha Vimukthi",
-  title: "IT Undergraduade | Aspiring Cyber Security Analyst",
+  title: "IT Undergraduate | Aspiring Cyber Security Analyst",
   avatarUrl: "/profile.jpg",
   animatedTaglines: [
-    "IT Undergraduade | Aspiring Cyber Security Analyst",
+    "IT Undergraduate | Aspiring Cyber Security Analyst",
     "Exploring the World of Cybersecurity",
     "AI Enthusiast",
     "Crafting High-Performance User Interfaces",

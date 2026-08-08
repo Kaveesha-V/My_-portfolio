@@ -196,9 +196,9 @@ git push -u origin main
 ## 👨‍💻 Author
 
 **Kaveesha Vimukthi**
-- **Role**: Senior Full-Stack & AI Systems Engineer
+- **Role**: Aspiring Cyber Security Analyst
 - **GitHub**: [@Kaveesha-V](https://github.com/Kaveesha-V)
-- **LinkedIn**: [Kaveesha Vimukthi](https://linkedin.com)
+- **LinkedIn**: [Kaveesha Vimukthi](https://www.linkedin.com/in/kaveesha-vimukthi-544a08352)
 
 ---
 
