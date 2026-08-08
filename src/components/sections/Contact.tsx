@@ -5,7 +5,7 @@ import type { Profile } from '../../types';
 import { sendContactMessage } from '../../lib/supabase';
 import confetti from 'canvas-confetti';
 import { Mail, Send, CheckCircle, AlertCircle, Sparkles } from 'lucide-react';
-import { GithubIcon, LinkedinIcon, WhatsappIcon } from '../common/Icons';
+import { GithubIcon, LinkedinIcon } from '../common/Icons';
 
 interface ContactProps {
   profile: Profile;
@@ -126,16 +126,6 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
                 >
                   <LinkedinIcon className="w-6 h-6 mb-2 group-hover:scale-110 transition-transform" />
                   <span className="text-[10px] font-mono-code">LinkedIn</span>
-                </a>
-
-                <a
-                  href={profile.socials.whatsapp || 'https://wa.me/94765502806'}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-300 hover:text-emerald-400 hover:border-emerald-500/40 hover:bg-emerald-950/20 transition-all group"
-                >
-                  <WhatsappIcon className="w-6 h-6 mb-2 text-emerald-400 group-hover:scale-110 transition-transform" />
-                  <span className="text-[10px] font-mono-code">WhatsApp</span>
                 </a>
               </div>
             </div>

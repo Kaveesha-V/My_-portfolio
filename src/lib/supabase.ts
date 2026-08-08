@@ -167,25 +167,6 @@ export async function sendContactMessage(msg: ContactMessage): Promise<{ success
     }
   }
 
-  // 3. CallMeBot Free Gateway Fallback
-  const callMeBotApiKey = import.meta.env.VITE_CALLMEBOT_API_KEY || '';
-  const waNumber = '94765502806';
-
-  if (callMeBotApiKey) {
-    try {
-      const formattedText = `📩 *New Portfolio Message*\n\n` +
-                            `👤 *Name:* ${msg.name}\n` +
-                            `📧 *Email:* ${msg.email}\n` +
-                            `📌 *Subject:* ${msg.subject || 'General'}\n\n` +
-                            `📝 *Message:*\n${msg.message}`;
-
-      const apiUrl = `https://api.callmebot.com/whatsapp.php?phone=${waNumber}&text=${encodeURIComponent(formattedText)}&apikey=${callMeBotApiKey}`;
-      await fetch(apiUrl, { mode: 'no-cors' });
-    } catch (e) {
-      console.warn('WhatsApp CallMeBot notification failed:', e);
-    }
-  }
-
   return { success: true };
 }
 

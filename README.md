@@ -17,9 +17,8 @@ A modern, high-performance personal portfolio application built for **Kaveesha V
 - 🎨 **Modern Futuristic Aesthetic**: Crafted with glassmorphic cards, custom dark/light theme switching, animated background grids, and smooth scroll animations via Framer Motion.
 - 📁 **Dynamic Data Layer**: Integrated with Supabase database queries with seamless client-side mock data fallback out-of-the-box.
 - 🛠️ **Filterable Projects & Code Samples**: Interactive tabbed project gallery showcasing tech stacks, live demos, repository links, and code previews.
-- 📩 **Instant Multi-Channel Contact**:
+- 📩 **Direct Contact Engine**:
   - Direct email submission via **Web3Forms API**.
-  - Real-time instant notification dispatch directly to WhatsApp via **CallMeBot Gateway**.
 - 📜 **Interactive Timeline & Certifications**: Visual experience journey and verified qualifications list.
 - 📱 **Fully Responsive**: Mobile-first design tested across mobile, tablet, and widescreen viewports.
 
@@ -32,7 +31,7 @@ A modern, high-performance personal portfolio application built for **Kaveesha V
 | **Frontend Core** | React 19, TypeScript, Vite |
 | **Styling & Motion** | Tailwind CSS v3, Framer Motion, Lucide React Icons |
 | **Backend & DB** | Supabase (PostgreSQL), Supabase Edge Functions |
-| **Messaging & APIs** | CallMeBot WhatsApp Gateway, Web3Forms API, Anthropic Claude |
+| **Messaging & APIs** | Web3Forms API, Anthropic Claude, TMDb API, Steam API |
 | **Deployment** | Vercel / Netlify |
 | **Tooling & Code Quality**| Oxlint, ESLint, PostCSS, Autoprefixer |
 
@@ -103,9 +102,6 @@ Open `.env` and fill in your keys (optional for local dev as full fallback mock 
 VITE_SUPABASE_URL=https://your-supabase-project.supabase.co
 VITE_SUPABASE_ANON_KEY=your-supabase-anon-key-here
 
-# WhatsApp Gateway API Key
-VITE_CALLMEBOT_API_KEY=your-callmebot-api-key-here
-
 # Web3Forms API Key
 VITE_WEB3FORMS_KEY=your-web3forms-key-here
 ```
@@ -172,7 +168,6 @@ git push -u origin main
 | :--- | :--- | :--- |
 | `VITE_SUPABASE_URL` | Supabase project URL | Optional (Uses mock data if omitted) |
 | `VITE_SUPABASE_ANON_KEY` | Supabase anonymous API key | Optional (Uses mock data if omitted) |
-| `VITE_CALLMEBOT_API_KEY` | CallMeBot WhatsApp API Key | Optional (Form fallback alert enabled) |
 | `VITE_WEB3FORMS_KEY` | Web3Forms Access Key for contact email | Optional |
 | `ANTHROPIC_API_KEY` | Anthropic Claude API Key (Supabase secrets) | Optional |
 

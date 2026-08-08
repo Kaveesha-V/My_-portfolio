@@ -18,7 +18,6 @@ export const MOCK_PROFILE: Profile = {
   socials: {
     github: "https://github.com/Kaveesha-V",
     linkedin: "https://www.linkedin.com/in/kaveesha-vimukthi-544a08352",
-    whatsapp: "https://wa.me/94765502806",
     email: "mailto:kaveeshavimukthi688@gmail.com"
   },
   stats: {
@@ -79,19 +78,19 @@ export const MOCK_PROJECTS: Project[] = [
   },
   {
     id: 'proj-2',
-    title: 'Movies & Games Review Website',
-    description: 'An interactive web platform for reviewing, rating, and showcasing trending movies and video games.',
-    longDescription: 'Created as a leisure-time passion project combining visual media design and web development. Features interactive review listings, rating displays, category filtering, and custom graphics crafted with Photoshop & Canva Pro.',
-    tags: ['Web Development', 'React', 'HTML', 'CSS', 'UI/UX Design'],
+    title: 'Movies & Games Review Platform',
+    description: 'Unified media tracking platform with live TMDb & Steam data, custom Watched/Backlog lists, and upcoming BNPL wishlist purchasing.',
+    longDescription: 'A unified platform created to track and organize personal media libraries into custom "Watched/Completed" and "Unwatched/Backlog" lists for both movies and video games using live data from TMDb and Steam APIs. In future updates, BNPL (Buy Now, Pay Later) payment integration will allow gamers to purchase games from their wishlist in flexible installments.',
+    tags: ['React', 'TMDb API', 'Steam API', 'BNPL Roadmap', 'UI/UX Design'],
     category: 'Web',
     imageUrl: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=1000&q=80',
     featured: true,
     architectureHighlights: [
-      'Interactive visual layout for rating and browsing movie and game reviews',
-      'Custom visual graphics produced using Adobe Photoshop, Illustrator & Canva Pro',
-      'Responsive interface optimized across desktop and mobile screens'
+      'Organizes media into custom "Watched/Completed" & "Unwatched/Backlog" libraries via TMDb & Steam live APIs',
+      'Custom visual UI/UX layout crafted for seamless movie & game discovery',
+      'Roadmap: Buy Now, Pay Later (BNPL) installment payments for purchasing wishlist games directly'
     ],
-    metrics: '🎬 Passion Project | Leisure Activity'
+    metrics: '🎬 TMDb & Steam Live APIs | BNPL Roadmap'
   },
   {
     id: 'proj-3',
