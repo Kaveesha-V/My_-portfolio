@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AnimatedSection } from '../common/AnimatedSection';
-import type { Project, ProjectCategory } from '../../types';
+import type { Project } from '../../types';
 import { ExternalLink, Sparkles, X, CheckCircle2, Layers, Cpu } from 'lucide-react';
 import { GithubIcon } from '../common/Icons';
 
@@ -10,14 +10,14 @@ interface ProjectsProps {
 }
 
 export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
-  const [selectedCategory, setSelectedCategory] = useState<ProjectCategory>('All');
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [activeModalProject, setActiveModalProject] = useState<Project | null>(null);
 
-  const categories: ProjectCategory[] = ['All', 'Full Stack', 'Web', 'Game Dev'];
+  const categories: string[] = ['All', 'Cyber Security', 'Game Dev', 'Graphic Design', 'Full Stack'];
 
   const filteredProjects = selectedCategory === 'All'
     ? projects
-    : projects.filter(p => p.category === selectedCategory);
+    : projects.filter(p => p.category.toLowerCase().includes(selectedCategory.toLowerCase()) || p.tags.some(t => t.toLowerCase().includes(selectedCategory.toLowerCase())));
 
   return (
     <AnimatedSection id="projects" className="py-24 relative">

@@ -14,7 +14,7 @@ interface SkillsProps {
 export const Skills: React.FC<SkillsProps> = ({ skills }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  const categories: string[] = ['All', 'Web & Mobile', 'Programming Languages', 'Design & Creative', 'Databases & Tools'];
+  const categories: string[] = ['All', 'Cyber Security & Tools', 'Programming Languages', 'Web & Mobile', 'Design & Creative', 'Databases & Systems'];
 
   const filteredSkills = selectedCategory === 'All'
     ? skills

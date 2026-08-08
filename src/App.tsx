@@ -6,10 +6,10 @@ import { About } from './components/sections/About';
 import { Skills } from './components/sections/Skills';
 import { Projects } from './components/sections/Projects';
 import { Timeline } from './components/sections/Timeline';
+import { Qualifications } from './components/sections/Qualifications';
 import { Contact } from './components/sections/Contact';
 import { Footer } from './components/sections/Footer';
 import { ChatWidget } from './components/chat/ChatWidget';
-import { Qualifications } from './components/sections/Qualifications';
 import { getProfile, getProjects, getSkills, getExperience, getCertifications } from './lib/supabase';
 import type { Profile, Project, Skill, Experience, Certification } from './types';
 import { Bot } from 'lucide-react';
@@ -50,10 +50,10 @@ export function App() {
 
   if (loading || !profile) {
     return (
-      <div className="min-h-screen bg-[#0a0a12] flex items-center justify-center">
+      <div className="min-h-screen bg-[#090a10] flex items-center justify-center">
         <div className="flex flex-col items-center gap-4">
           <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-400 to-purple-600 p-[2px] animate-spin">
-            <div className="w-full h-full bg-[#0a0a12] rounded-[14px]" />
+            <div className="w-full h-full bg-[#090a10] rounded-[14px]" />
           </div>
           <span className="text-xs font-mono-code text-cyan-400 tracking-widest uppercase">
             Initialising Portfolio Engine...
@@ -64,7 +64,7 @@ export function App() {
   }
 
   return (
-    <div className="relative min-h-screen bg-[#0a0a12] text-slate-100 selection:bg-cyan-500 selection:text-black">
+    <div className="relative min-h-screen bg-[#090a10] text-slate-100 selection:bg-cyan-400 selection:text-black">
       {/* Dynamic Background Mesh */}
       <BackgroundGrid />
 

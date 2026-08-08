@@ -2,6 +2,7 @@ export interface Profile {
   name: string;
   title: string;
   avatarUrl?: string;
+  resumeUrl?: string;
   animatedTaglines: string[];
   bio: string;
   resumeSummary: string;
@@ -21,18 +22,18 @@ export interface Profile {
   };
 }
 
-export type SkillCategory = 'Web & Mobile' | 'Programming Languages' | 'Design & Creative' | 'Databases & Tools';
+export type SkillCategory = 'Web & Mobile' | 'Programming Languages' | 'Design & Creative' | 'Databases & Tools' | 'Cyber Security & Tools' | 'Databases & Systems' | string;
 
 export interface Skill {
   id: string;
-  category: SkillCategory;
+  category: string;
   name: string;
   level: number; // 0 - 100 percentage
   icon: string;
   description: string;
 }
 
-export type ProjectCategory = 'All' | 'Full Stack' | 'Web' | 'Game Dev';
+export type ProjectCategory = 'All' | 'Full Stack' | 'Web' | 'Game Dev' | 'Cyber Security' | 'Graphic Design' | string;
 
 export interface Project {
   id: string;
@@ -40,7 +41,7 @@ export interface Project {
   description: string;
   longDescription: string;
   tags: string[];
-  category: ProjectCategory;
+  category: string;
   imageUrl: string;
   demoUrl?: string;
   githubUrl?: string;
