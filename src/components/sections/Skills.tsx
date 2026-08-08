@@ -3,13 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { AnimatedSection } from '../common/AnimatedSection';
 import type { Skill } from '../../types';
 import { Code } from 'lucide-react';
-import {
-  ReactBrandIcon, HtmlBrandIcon, CssBrandIcon, PythonBrandIcon,
-  CPlusPlusBrandIcon, JavaBrandIcon, LinuxBrandIcon, MySqlBrandIcon,
-  PostgreSqlBrandIcon, SqlBrandIcon, PhotoshopBrandIcon, IllustratorBrandIcon,
-  AfterEffectsBrandIcon, CanvaBrandIcon, DesignPaletteBrandIcon, VideoEditingBrandIcon,
-  AndroidBrandIcon, AntigravityBrandIcon, WebDevBrandIcon
-} from '../common/BrandIcons';
+import { CPlusPlusBrandIcon } from '../common/BrandIcons';
 
 interface SkillsProps {
   skills: Skill[];
@@ -24,29 +18,28 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
     ? skills
     : skills.filter(s => s.category === selectedCategory);
 
-  const getBrandIcon = (skillName: string) => {
+  const getSkillLogo = (skillName: string) => {
     const nameLower = skillName.toLowerCase();
-    if (nameLower.includes('react')) return <ReactBrandIcon className="w-6 h-6" />;
-    if (nameLower.includes('html')) return <HtmlBrandIcon className="w-6 h-6" />;
-    if (nameLower.includes('css')) return <CssBrandIcon className="w-6 h-6" />;
-    if (nameLower.includes('python')) return <PythonBrandIcon className="w-6 h-6" />;
-    if (nameLower.includes('c++')) return <CPlusPlusBrandIcon className="w-6 h-6" />;
-    if (nameLower.includes('java') && !nameLower.includes('script')) return <JavaBrandIcon className="w-6 h-6" />;
-    if (nameLower.includes('linux')) return <LinuxBrandIcon className="w-6 h-6" />;
-    if (nameLower.includes('mysql')) return <MySqlBrandIcon className="w-6 h-6" />;
-    if (nameLower.includes('postgres')) return <PostgreSqlBrandIcon className="w-6 h-6" />;
-    if (nameLower.includes('sql')) return <SqlBrandIcon className="w-6 h-6" />;
-    if (nameLower.includes('photoshop')) return <PhotoshopBrandIcon className="w-6 h-6" />;
-    if (nameLower.includes('illustrator')) return <IllustratorBrandIcon className="w-6 h-6" />;
-    if (nameLower.includes('after effects')) return <AfterEffectsBrandIcon className="w-6 h-6" />;
-    if (nameLower.includes('canva')) return <CanvaBrandIcon className="w-6 h-6" />;
-    if (nameLower.includes('graphic design')) return <DesignPaletteBrandIcon className="w-6 h-6" />;
-    if (nameLower.includes('video editing')) return <VideoEditingBrandIcon className="w-6 h-6" />;
-    if (nameLower.includes('mobile')) return <AndroidBrandIcon className="w-6 h-6" />;
-    if (nameLower.includes('antigravity')) return <AntigravityBrandIcon className="w-6 h-6" />;
-    if (nameLower.includes('web development') || nameLower.includes('web')) return <WebDevBrandIcon className="w-6 h-6" />;
+    if (nameLower.includes('react')) return <img src="/Logos/react.png" alt="React" className="w-8 h-8 object-contain rounded-md" />;
+    if (nameLower.includes('html')) return <img src="/Logos/HTML.png" alt="HTML5" className="w-8 h-8 object-contain rounded-md" />;
+    if (nameLower.includes('css')) return <img src="/Logos/CSS.jpg" alt="CSS3" className="w-8 h-8 object-contain rounded-md" />;
+    if (nameLower.includes('python')) return <img src="/Logos/Python.jpg" alt="Python" className="w-8 h-8 object-contain rounded-md" />;
+    if (nameLower.includes('java') && !nameLower.includes('script')) return <img src="/Logos/Java.webp" alt="Java" className="w-8 h-8 object-contain rounded-md" />;
+    if (nameLower.includes('linux')) return <img src="/Logos/Linux.webp" alt="Linux" className="w-8 h-8 object-contain rounded-md" />;
+    if (nameLower.includes('mysql')) return <img src="/Logos/mysql.webp" alt="MySQL" className="w-8 h-8 object-contain rounded-md" />;
+    if (nameLower.includes('postgres')) return <img src="/Logos/Postgresql.webp" alt="PostgreSQL" className="w-8 h-8 object-contain rounded-md" />;
+    if (nameLower.includes('sql')) return <img src="/Logos/SQL.webp" alt="SQL" className="w-8 h-8 object-contain rounded-md" />;
+    if (nameLower.includes('photoshop')) return <img src="/Logos/ps.webp" alt="Photoshop" className="w-8 h-8 object-contain rounded-md" />;
+    if (nameLower.includes('illustrator')) return <img src="/Logos/AI.jpg" alt="Illustrator" className="w-8 h-8 object-contain rounded-md" />;
+    if (nameLower.includes('after effects')) return <img src="/Logos/AE.webp" alt="After Effects" className="w-8 h-8 object-contain rounded-md" />;
+    if (nameLower.includes('canva')) return <img src="/Logos/Canva.webp" alt="Canva" className="w-8 h-8 object-contain rounded-md" />;
+    if (nameLower.includes('antigravity')) return <img src="/Logos/antigravity.jpg" alt="Antigravity AI" className="w-8 h-8 object-contain rounded-md" />;
+    if (nameLower.includes('mobile') || nameLower.includes('android')) return <img src="/Logos/android.webp" alt="Android" className="w-8 h-8 object-contain rounded-md" />;
+    if (nameLower.includes('graphic design')) return <img src="/Logos/AI.jpg" alt="Graphic Design" className="w-8 h-8 object-contain rounded-md" />;
+    if (nameLower.includes('video editing')) return <img src="/Logos/AE.webp" alt="Video Editing" className="w-8 h-8 object-contain rounded-md" />;
+    if (nameLower.includes('c++')) return <CPlusPlusBrandIcon className="w-8 h-8" />;
+    if (nameLower.includes('web development') || nameLower.includes('web')) return <img src="/Logos/HTML.png" alt="Web Development" className="w-8 h-8 object-contain rounded-md" />;
 
-    // Default Fallback
     return <Code className="w-6 h-6 text-purple-400" />;
   };
 
@@ -105,8 +98,8 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
               >
                 <div>
                   <div className="flex items-center gap-3.5 mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/10 transition-all shrink-0 shadow-inner">
-                      {getBrandIcon(skill.name)}
+                    <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/10 transition-all shrink-0 shadow-inner overflow-hidden p-1.5">
+                      {getSkillLogo(skill.name)}
                     </div>
                     <div>
                       <h3 className="font-bold text-white text-base group-hover:text-cyan-400 transition-colors">
