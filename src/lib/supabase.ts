@@ -124,7 +124,7 @@ export async function getCertifications(): Promise<Certification[]> {
 
 export async function sendContactMessage(msg: ContactMessage): Promise<{ success: boolean; error?: string }> {
   // 1. Web3Forms Free Instant Mobile Notification Service (Delivers to kaveeshavimukthi688@gmail.com)
-  const web3FormsKey = import.meta.env.VITE_WEB3FORMS_KEY || '';
+  const web3FormsKey = import.meta.env.VITE_WEB3FORMS_KEY || 'eb2a6fba-a03d-45bc-8ad4-e82369e79ae9';
 
   if (web3FormsKey) {
     try {
