@@ -42,12 +42,14 @@ export const MOCK_SKILLS: Skill[] = [
   { id: '7', name: 'C++ (Still Learning)', category: 'Programming Languages', level: 65, icon: 'Terminal', description: 'System-level programming concepts, memory management, core algorithms, and game logic' },
   { id: '8', name: 'Python (Still Learning)', category: 'Programming Languages', level: 72, icon: 'Terminal', description: 'Scripting, automation logic, data processing, and basic AI/ML exploration' },
 
+  // Cyber Security & Tools
+  { id: '12', name: 'Linux (Still Learning)', category: 'Cyber Security & Tools', level: 75, icon: 'Terminal', description: 'Linux CLI commands, bash shell scripting, system permissions, security tools, and server environment navigation' },
+  { id: '19', name: 'Antigravity', category: 'Cyber Security & Tools', level: 90, icon: 'Bot', description: 'Advanced AI coding assistant environment, prompt engineering, and agentic workflows' },
+
   // Databases & Systems
-  { id: '9', name: 'SQL (Still Learning)', category: 'Databases & Tools', level: 75, icon: 'Database', description: 'Relational database design, SQL queries, table joins, and database management' },
-  { id: '10', name: 'PostgreSQL', category: 'Databases & Tools', level: 78, icon: 'Database', description: 'Relational schema design, complex queries, table indexing, and structured data storage' },
-  { id: '11', name: 'MySQL Database', category: 'Databases & Tools', level: 80, icon: 'Database', description: 'Relational database administration, SQL queries, table indexing, and structured database design' },
-  { id: '12', name: 'Linux (Still Learning)', category: 'Databases & Tools', level: 70, icon: 'Terminal', description: 'Linux CLI commands, bash shell scripting, system permissions, and server environment navigation' },
-  { id: '19', name: 'Antigravity', category: 'Databases & Tools', level: 90, icon: 'Bot', description: 'Advanced AI coding assistant environment, prompt engineering, and agentic workflows' },
+  { id: '9', name: 'SQL (Still Learning)', category: 'Databases & Systems', level: 75, icon: 'Database', description: 'Relational database design, SQL queries, table joins, and database management' },
+  { id: '10', name: 'PostgreSQL', category: 'Databases & Systems', level: 78, icon: 'Database', description: 'Relational schema design, complex queries, table indexing, and structured data storage' },
+  { id: '11', name: 'MySQL Database', category: 'Databases & Systems', level: 80, icon: 'Database', description: 'Relational database administration, SQL queries, table indexing, and structured database design' },
 
   // Design & Creative
   { id: '13', name: 'Adobe Photoshop', category: 'Design & Creative', level: 90, icon: 'Palette', description: 'Photo editing, digital artwork, raster graphic composition, and UI asset creation' },
