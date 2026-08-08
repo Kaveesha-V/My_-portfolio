@@ -125,7 +125,7 @@ export async function getCertifications(): Promise<Certification[]> {
 export async function sendContactMessage(msg: ContactMessage): Promise<{ success: boolean; error?: string }> {
   if (supabase) {
     try {
-      const { error } = await supabase.from('contact_messages').insert([
+      await supabase.from('contact_messages').insert([
         {
           name: msg.name,
           email: msg.email,
@@ -133,15 +133,30 @@ export async function sendContactMessage(msg: ContactMessage): Promise<{ success
           message: msg.message,
         },
       ]);
-      if (error) throw error;
-      return { success: true };
     } catch (e: any) {
-      console.error('Failed to submit message to Supabase:', e);
-      return { success: false, error: e.message };
+      console.warn('Supabase contact insert error:', e);
     }
   }
-  // Simulate successful contact submission locally
-  await new Promise((resolve) => setTimeout(resolve, 800));
+
+  // CallMeBot Free WhatsApp API Notification Integration
+  const callMeBotApiKey = import.meta.env.VITE_CALLMEBOT_API_KEY || '';
+  const waNumber = '94765502806';
+
+  if (callMeBotApiKey) {
+    try {
+      const formattedText = `📩 *New Portfolio Message*\n\n` +
+                            `👤 *Name:* ${msg.name}\n` +
+                            `📧 *Email:* ${msg.email}\n` +
+                            `📌 *Subject:* ${msg.subject || 'General'}\n\n` +
+                            `📝 *Message:*\n${msg.message}`;
+
+      const apiUrl = `https://api.callmebot.com/whatsapp.php?phone=${waNumber}&text=${encodeURIComponent(formattedText)}&apikey=${callMeBotApiKey}`;
+      await fetch(apiUrl, { mode: 'no-cors' });
+    } catch (e) {
+      console.warn('WhatsApp CallMeBot notification failed:', e);
+    }
+  }
+
   return { success: true };
 }
 
