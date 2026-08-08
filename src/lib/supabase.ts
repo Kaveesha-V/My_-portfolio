@@ -123,6 +123,33 @@ export async function getCertifications(): Promise<Certification[]> {
 }
 
 export async function sendContactMessage(msg: ContactMessage): Promise<{ success: boolean; error?: string }> {
+  // 1. Web3Forms Free Instant Mobile Notification Service (Delivers to kaveeshavimukthi688@gmail.com)
+  const web3FormsKey = import.meta.env.VITE_WEB3FORMS_KEY || '';
+
+  if (web3FormsKey) {
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: web3FormsKey,
+          name: msg.name,
+          email: msg.email,
+          subject: msg.subject || 'Portfolio Contact Message',
+          message: msg.message,
+          from_name: `${msg.name} (Portfolio Contact)`,
+        }),
+      });
+      const resData = await res.json();
+      if (resData.success) {
+        return { success: true };
+      }
+    } catch (e) {
+      console.warn('Web3Forms notification error:', e);
+    }
+  }
+
+  // 2. Supabase Database Fallback
   if (supabase) {
     try {
       await supabase.from('contact_messages').insert([
@@ -138,7 +165,7 @@ export async function sendContactMessage(msg: ContactMessage): Promise<{ success
     }
   }
 
-  // CallMeBot Free WhatsApp API Notification Integration
+  // 3. CallMeBot Free Gateway Fallback
   const callMeBotApiKey = import.meta.env.VITE_CALLMEBOT_API_KEY || '';
   const waNumber = '94765502806';
 
