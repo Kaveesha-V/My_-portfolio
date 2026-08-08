@@ -128,21 +128,22 @@ export async function sendContactMessage(msg: ContactMessage): Promise<{ success
 
   if (web3FormsKey) {
     try {
+      const formData = new FormData();
+      formData.append('access_key', web3FormsKey);
+      formData.append('name', msg.name);
+      formData.append('email', msg.email);
+      formData.append('subject', msg.subject || 'Portfolio Contact Message');
+      formData.append('message', msg.message);
+
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          access_key: web3FormsKey,
-          name: msg.name,
-          email: msg.email,
-          subject: msg.subject || 'Portfolio Contact Message',
-          message: msg.message,
-          from_name: `${msg.name} (Portfolio Contact)`,
-        }),
+        body: formData,
       });
       const resData = await res.json();
       if (resData.success) {
         return { success: true };
+      } else {
+        console.warn('Web3Forms response error:', resData);
       }
     } catch (e) {
       console.warn('Web3Forms notification error:', e);
