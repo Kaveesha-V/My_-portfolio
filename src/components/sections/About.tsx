@@ -12,7 +12,7 @@ export const About: React.FC<AboutProps> = ({ profile }) => {
   return (
     <AnimatedSection id="about" className="py-24 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono-code mb-3">
@@ -27,7 +27,7 @@ export const About: React.FC<AboutProps> = ({ profile }) => {
 
         {/* Grid Content */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Profile Interactive Card */}
           <div className="lg:col-span-5 flex justify-center">
             <motion.div
@@ -37,7 +37,7 @@ export const About: React.FC<AboutProps> = ({ profile }) => {
             >
               {/* Top Accent Gradient Bar */}
               <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500" />
-              
+
               {/* Profile Image Wrapper */}
               <div className="relative rounded-2xl overflow-hidden mb-6 aspect-square bg-[#0e0e1a] border border-white/10 flex items-center justify-center group-hover:border-cyan-500/40 transition-colors">
                 <img
@@ -46,7 +46,7 @@ export const About: React.FC<AboutProps> = ({ profile }) => {
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#090a10] via-transparent to-transparent opacity-60" />
-                
+
                 <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono-code text-slate-300">
                   <span className="flex items-center gap-1 bg-black/70 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
                     <MapPin className="w-3.5 h-3.5 text-cyan-400" />
@@ -89,11 +89,11 @@ export const About: React.FC<AboutProps> = ({ profile }) => {
 
           {/* Detailed Narrative & Pillars */}
           <div className="lg:col-span-7 flex flex-col gap-6">
-            
+
             <div className="glass-card p-6 sm:p-8 rounded-3xl border border-white/10">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2.5 font-kumbh">
                 <Code2 className="w-6 h-6 text-cyan-400" />
-                <span>My Engineering & Creative Philosophy</span>
+                <span>About Me</span>
               </h3>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-jakarta">
                 I focus on building functional web and interactive applications that pair strong visual aesthetics with clean backend logic. By bridging graphic design, video editing, and software development, I create intuitive user experiences grounded in continuous technical growth across programming languages and modern cybersecurity frameworks.
