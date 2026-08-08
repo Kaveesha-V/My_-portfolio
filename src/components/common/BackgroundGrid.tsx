@@ -39,6 +39,7 @@ export const BackgroundGrid: React.FC = () => {
 
     const render = () => {
       ctx.clearRect(0, 0, width, height);
+      const isLight = document.documentElement.classList.contains('light');
 
       // Draw faint connections
       for (let i = 0; i < particles.length; i++) {
@@ -51,7 +52,9 @@ export const BackgroundGrid: React.FC = () => {
 
         ctx.beginPath();
         ctx.arc(p1.x, p1.y, p1.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0, 240, 255, ${p1.alpha})`;
+        ctx.fillStyle = isLight
+          ? `rgba(2, 132, 199, ${Math.min(p1.alpha * 1.8, 0.7)})`
+          : `rgba(0, 240, 255, ${p1.alpha})`;
         ctx.fill();
 
         for (let j = i + 1; j < particles.length; j++) {
@@ -64,8 +67,10 @@ export const BackgroundGrid: React.FC = () => {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.strokeStyle = `rgba(138, 43, 226, ${0.15 * (1 - dist / 130)})`;
-            ctx.lineWidth = 0.6;
+            ctx.strokeStyle = isLight
+              ? `rgba(126, 34, 206, ${0.35 * (1 - dist / 130)})`
+              : `rgba(138, 43, 226, ${0.15 * (1 - dist / 130)})`;
+            ctx.lineWidth = isLight ? 0.9 : 0.6;
             ctx.stroke();
           }
         }
