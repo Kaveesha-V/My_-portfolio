@@ -93,10 +93,10 @@ export const About: React.FC<AboutProps> = ({ profile }) => {
             <div className="glass-card p-6 sm:p-8 rounded-3xl border border-white/10">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2.5 font-kumbh">
                 <Code2 className="w-6 h-6 text-cyan-400" />
-                <span>About Me</span>
+                <span>Technical Profile</span>
               </h3>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-jakarta">
-                I focus on building functional web and interactive applications that pair strong visual aesthetics with clean backend logic. By bridging graphic design, video editing, and software development, I create intuitive user experiences grounded in continuous technical growth across programming languages and modern cybersecurity frameworks.
+                I am an IT Undergraduate at the University of Kelaniya with a strong focus on building secure and efficient digital solutions. My technical interests span modern web development, comprehensive cybersecurity practices, and high-performance game development using C++ and Raylib. I complement my engineering background with proven skills in graphic design and video editing, allowing me to create both technically robust and visually compelling user experiences.
               </p>
             </div>
 
