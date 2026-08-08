@@ -132,8 +132,9 @@ export async function sendContactMessage(msg: ContactMessage): Promise<{ success
       formData.append('access_key', web3FormsKey);
       formData.append('name', msg.name);
       formData.append('email', msg.email);
-      formData.append('subject', msg.subject || 'Portfolio Contact Message');
+      formData.append('subject', msg.subject || 'New Contact Inquiry');
       formData.append('message', msg.message);
+      formData.append('from_name', 'Kaveesha Portfolio Notification');
 
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
