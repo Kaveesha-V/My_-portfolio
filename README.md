@@ -1,14 +1,12 @@
-# 🚀 Kaveesha Vimukthi | Senior Full-Stack & AI Systems Portfolio
+# 🚀 Kaveesha Vimukthi — Personal Portfolio & Interactive AI Resume
 
-[![React](https://img.shields.io/badge/React-19.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-[![Supabase](https://img.shields.io/badge/Supabase-Database-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
-[![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.0-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
-[![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
-A modern, high-performance, dark-themed personal portfolio and AI Systems Showcase built with **React 19**, **TypeScript**, **Vite**, **Tailwind CSS**, and **Supabase**. Featuring an interactive AI chatbot assistant, real-time message dispatching via WhatsApp and Web3Forms, animated background grids, dark/light mode toggle, and rich interactive project showcases.
+A modern, high-performance personal portfolio application built for **Kaveesha Vimukthi** — IT Undergraduate at the **University of Kelaniya** specializing in **Cybersecurity**, **Web Development**, **Game Development (C++/Raylib)**, and **Graphic Design / Video Editing**.
 
 ---
 
