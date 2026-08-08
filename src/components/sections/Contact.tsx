@@ -5,7 +5,7 @@ import type { Profile } from '../../types';
 import { sendContactMessage } from '../../lib/supabase';
 import confetti from 'canvas-confetti';
 import { Mail, Send, CheckCircle, AlertCircle, Sparkles } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from '../common/Icons';
+import { GithubIcon, LinkedinIcon, WhatsappIcon } from '../common/Icons';
 
 interface ContactProps {
   profile: Profile;
@@ -36,46 +36,45 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
     setLoading(true);
     setStatus(null);
 
-    const result = await sendContactMessage(formData);
-
-    setLoading(false);
-    if (result.success) {
-      setStatus({ type: 'success', message: 'Thank you! Your message has been sent successfully.' });
-      setFormData({ name: '', email: '', subject: '', message: '' });
-
-      // Trigger celebratory confetti effect
-      try {
+    try {
+      const result = await sendContactMessage(formData);
+      setLoading(false);
+      if (result.success) {
+        setStatus({ type: 'success', message: 'Thank you! Your message has been sent successfully.' });
+        setFormData({ name: '', email: '', subject: '', message: '' });
         confetti({
           particleCount: 80,
           spread: 70,
           origin: { y: 0.6 },
-          colors: ['#00f0ff', '#8a2be2', '#10b981'],
+          colors: ['#06b6d4', '#3b82f6', '#10b981', '#a855f7'],
         });
-      } catch (e) {
-        // Fallback silently if confetti fails
+      } else {
+        setStatus({ type: 'error', message: result.error || 'Failed to send message. Please try again.' });
       }
-    } else {
-      setStatus({ type: 'error', message: result.error || 'Failed to send message. Please try again.' });
+    } catch {
+      setLoading(false);
+      setStatus({ type: 'error', message: 'An unexpected error occurred. Please try again.' });
     }
   };
 
   return (
-    <AnimatedSection id="contact" className="py-24 relative">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-24 relative overflow-hidden">
+      {/* Background Decorative Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-cyan-500/10 via-purple-500/10 to-emerald-500/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
-        {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-16">
-          <span className="text-xs font-mono-code text-cyan-400 tracking-widest uppercase mb-2">
-            // 05. Get In Touch
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
-            Let's Build Something <span className="text-gradient-cyan">Exceptional</span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <AnimatedSection className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono-code mb-4">
+            <Sparkles className="w-4 h-4" />
+            <span>GET IN TOUCH</span>
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-outfit">
+            Let's Build Something <span className="bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">Extraordinary</span>
           </h2>
-          <p className="text-sm text-slate-400 max-w-xl mt-3">
-            Have a project in mind, want to hire an engineer, or explore collaboration? Drop me a line below!
+          <p className="mt-4 text-slate-300 max-w-2xl mx-auto text-sm sm:text-base">
+            Have a project, security audit requirement, or collaboration in mind? Feel free to send a message or connect directly.
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full mt-4" />
-        </div>
+        </AnimatedSection>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
 
@@ -126,6 +125,17 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
                 >
                   <LinkedinIcon className="w-6 h-6 mb-2 group-hover:scale-110 transition-transform" />
                   <span className="text-[10px] font-mono-code">LinkedIn</span>
+                </a>
+
+                <a
+                  href={profile.socials.whatsapp || 'https://wa.me/94765502806'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-300 hover:text-emerald-400 hover:border-emerald-500/40 hover:bg-emerald-950/20 transition-all group"
+                  title="Connect & Follow on WhatsApp (0765502806)"
+                >
+                  <WhatsappIcon className="w-6 h-6 mb-2 text-emerald-400 group-hover:scale-110 transition-transform" />
+                  <span className="text-[10px] font-mono-code">WhatsApp</span>
                 </a>
               </div>
             </div>
@@ -240,6 +250,6 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
         </div>
 
       </div>
-    </AnimatedSection>
+    </section>
   );
 };
