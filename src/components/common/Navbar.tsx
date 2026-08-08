@@ -72,7 +72,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, theme = 'dark', onTo
         </a>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden md:flex items-center gap-1 bg-[#121220]/60 p-1.5 rounded-full border border-white/10 backdrop-blur-md">
+        <nav className="hidden md:flex items-center gap-1 bg-[#121220]/60 dark:bg-[#121220]/60 p-1.5 rounded-full border border-white/10 dark:border-white/10 backdrop-blur-md">
           {navLinks.map((link) => {
             const sectionId = link.href.substring(1);
             const isActive = activeSection === sectionId;
@@ -80,7 +80,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, theme = 'dark', onTo
               <a
                 key={link.name}
                 href={link.href}
-                className={`relative px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${isActive ? 'text-white' : 'text-slate-400 hover:text-slate-200'
+                className={`relative px-4 py-2 text-sm font-semibold rounded-full transition-all duration-200 ${isActive ? 'text-white dark:text-white' : 'text-slate-400 hover:text-white dark:text-slate-400 dark:hover:text-white'
                   }`}
               >
                 {isActive && (
