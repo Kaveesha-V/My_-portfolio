@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AnimatedSection } from '../common/AnimatedSection';
 import type { Skill } from '../../types';
+import { Code } from 'lucide-react';
 import {
-  Code, FileCode, Palette, Sparkles, Server, Database,
-  Terminal, Globe, Bot, Cpu, Layers, Container, Cloud, GitBranch, Video, Smartphone
-} from 'lucide-react';
+  ReactBrandIcon, HtmlBrandIcon, CssBrandIcon, PythonBrandIcon,
+  CPlusPlusBrandIcon, JavaBrandIcon, LinuxBrandIcon, MySqlBrandIcon,
+  PostgreSqlBrandIcon, SqlBrandIcon, PhotoshopBrandIcon, IllustratorBrandIcon,
+  AfterEffectsBrandIcon, CanvaBrandIcon, DesignPaletteBrandIcon, VideoEditingBrandIcon,
+  AndroidBrandIcon, AntigravityBrandIcon, WebDevBrandIcon
+} from '../common/BrandIcons';
 
 interface SkillsProps {
   skills: Skill[];
@@ -20,26 +24,30 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
     ? skills
     : skills.filter(s => s.category === selectedCategory);
 
-  const getIcon = (iconName: string) => {
-    switch (iconName) {
-      case 'Code': return <Code className="w-5 h-5" />;
-      case 'FileCode': return <FileCode className="w-5 h-5" />;
-      case 'Palette': return <Palette className="w-5 h-5" />;
-      case 'Sparkles': return <Sparkles className="w-5 h-5" />;
-      case 'Server': return <Server className="w-5 h-5" />;
-      case 'Database': return <Database className="w-5 h-5" />;
-      case 'Terminal': return <Terminal className="w-5 h-5" />;
-      case 'Globe': return <Globe className="w-5 h-5" />;
-      case 'Bot': return <Bot className="w-5 h-5" />;
-      case 'Cpu': return <Cpu className="w-5 h-5" />;
-      case 'Layers': return <Layers className="w-5 h-5" />;
-      case 'Container': return <Container className="w-5 h-5" />;
-      case 'Cloud': return <Cloud className="w-5 h-5" />;
-      case 'GitBranch': return <GitBranch className="w-5 h-5" />;
-      case 'Video': return <Video className="w-5 h-5" />;
-      case 'Smartphone': return <Smartphone className="w-5 h-5" />;
-      default: return <Code className="w-5 h-5" />;
-    }
+  const getBrandIcon = (skillName: string) => {
+    const nameLower = skillName.toLowerCase();
+    if (nameLower.includes('react')) return <ReactBrandIcon className="w-6 h-6" />;
+    if (nameLower.includes('html')) return <HtmlBrandIcon className="w-6 h-6" />;
+    if (nameLower.includes('css')) return <CssBrandIcon className="w-6 h-6" />;
+    if (nameLower.includes('python')) return <PythonBrandIcon className="w-6 h-6" />;
+    if (nameLower.includes('c++')) return <CPlusPlusBrandIcon className="w-6 h-6" />;
+    if (nameLower.includes('java') && !nameLower.includes('script')) return <JavaBrandIcon className="w-6 h-6" />;
+    if (nameLower.includes('linux')) return <LinuxBrandIcon className="w-6 h-6" />;
+    if (nameLower.includes('mysql')) return <MySqlBrandIcon className="w-6 h-6" />;
+    if (nameLower.includes('postgres')) return <PostgreSqlBrandIcon className="w-6 h-6" />;
+    if (nameLower.includes('sql')) return <SqlBrandIcon className="w-6 h-6" />;
+    if (nameLower.includes('photoshop')) return <PhotoshopBrandIcon className="w-6 h-6" />;
+    if (nameLower.includes('illustrator')) return <IllustratorBrandIcon className="w-6 h-6" />;
+    if (nameLower.includes('after effects')) return <AfterEffectsBrandIcon className="w-6 h-6" />;
+    if (nameLower.includes('canva')) return <CanvaBrandIcon className="w-6 h-6" />;
+    if (nameLower.includes('graphic design')) return <DesignPaletteBrandIcon className="w-6 h-6" />;
+    if (nameLower.includes('video editing')) return <VideoEditingBrandIcon className="w-6 h-6" />;
+    if (nameLower.includes('mobile')) return <AndroidBrandIcon className="w-6 h-6" />;
+    if (nameLower.includes('antigravity')) return <AntigravityBrandIcon className="w-6 h-6" />;
+    if (nameLower.includes('web development') || nameLower.includes('web')) return <WebDevBrandIcon className="w-6 h-6" />;
+
+    // Default Fallback
+    return <Code className="w-6 h-6 text-purple-400" />;
   };
 
   return (
@@ -96,9 +104,9 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
                 className="glass-card p-6 rounded-2xl border border-white/10 flex flex-col justify-between group hover:border-purple-500/40"
               >
                 <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform">
-                      {getIcon(skill.icon)}
+                  <div className="flex items-center gap-3.5 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/10 transition-all shrink-0 shadow-inner">
+                      {getBrandIcon(skill.name)}
                     </div>
                     <div>
                       <h3 className="font-bold text-white text-base group-hover:text-cyan-400 transition-colors">
