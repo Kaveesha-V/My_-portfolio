@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Bot, ChevronDown, Terminal, Download, Sparkles } from 'lucide-react';
 import type { Profile } from '../../types';
+import { generateResumePdf } from '../../utils/generateResumePdf';
 
 interface HeroProps {
   profile: Profile;
@@ -105,15 +106,13 @@ export const Hero: React.FC<HeroProps> = ({ profile, onOpenChat }) => {
             <span>Chat with My AI</span>
           </button>
 
-          <a
-            href={profile.resumeUrl || '#contact'}
-            target={profile.resumeUrl ? '_blank' : '_self'}
-            rel="noopener noreferrer"
-            className="px-6 py-4 rounded-xl bg-[#14172c]/80 border border-white/15 text-slate-200 font-medium text-sm hover:text-white hover:border-white/30 hover:bg-[#1b1e38] transition-all flex items-center justify-center gap-2 group"
+          <button
+            onClick={generateResumePdf}
+            className="px-6 py-4 rounded-xl bg-[#14172c]/80 border border-white/15 text-slate-200 font-medium text-sm hover:text-white hover:border-white/30 hover:bg-[#1b1e38] transition-all flex items-center justify-center gap-2 group shadow-md"
           >
             <Download className="w-4 h-4 text-purple-400 group-hover:translate-y-0.5 transition-transform" />
             <span>Get Resume</span>
-          </a>
+          </button>
         </motion.div>
 
         {/* Mini Technical Metrics Cards */}

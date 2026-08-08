@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Bot, Menu, X, Code2 } from 'lucide-react';
+import { Bot, Menu, X, Code2, Sun, Moon } from 'lucide-react';
 
 interface NavbarProps {
   onOpenChat: () => void;
+  theme?: 'dark' | 'light';
+  onToggleTheme?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenChat }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onOpenChat, theme = 'dark', onToggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
@@ -96,6 +98,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat }) => {
 
         {/* Action Buttons */}
         <div className="hidden md:flex items-center gap-3">
+          {onToggleTheme && (
+            <button
+              onClick={onToggleTheme}
+              className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 hover:text-cyan-400 border border-white/10 transition-all hover:scale-105"
+              title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
+              aria-label="Toggle Theme"
+            >
+              {theme === 'dark' ? (
+                <Sun className="w-4 h-4 text-amber-400" />
+              ) : (
+                <Moon className="w-4 h-4 text-indigo-400" />
+              )}
+            </button>
+          )}
+
           <button
             onClick={onOpenChat}
             className="flex items-center gap-2 px-4 py-2 text-xs font-mono-code font-semibold rounded-full bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 hover:border-cyan-400 shadow-sm shadow-cyan-500/20 transition-all hover:scale-105 active:scale-95"
@@ -107,6 +124,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenChat }) => {
 
         {/* Mobile Menu Toggle */}
         <div className="md:hidden flex items-center gap-2">
+          {onToggleTheme && (
+            <button
+              onClick={onToggleTheme}
+              className="p-2 rounded-lg bg-white/5 border border-white/10 text-slate-300"
+              aria-label="Toggle Theme"
+            >
+              {theme === 'dark' ? <Sun className="w-5 h-5 text-amber-400" /> : <Moon className="w-5 h-5 text-indigo-400" />}
+            </button>
+          )}
           <button
             onClick={onOpenChat}
             className="p-2 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/30"

@@ -4,36 +4,35 @@ interface BrandIconProps {
   className?: string;
 }
 
-// 1. React - #61DAFB
+// 1. React - Official React Cyan #61DAFB
 export const ReactBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="#61DAFB" strokeWidth="1.5" transform="rotate(0 12 12)" />
-    <ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="#61DAFB" strokeWidth="1.5" transform="rotate(60 12 12)" />
-    <ellipse cx="12" cy="12" rx="10" ry="4.2" stroke="#61DAFB" strokeWidth="1.5" transform="rotate(120 12 12)" />
-    <circle cx="12" cy="12" r="2" fill="#61DAFB" />
+    <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" strokeWidth="1.5" transform="rotate(0 12 12)" />
+    <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" strokeWidth="1.5" transform="rotate(60 12 12)" />
+    <ellipse cx="12" cy="12" rx="10" ry="4" stroke="#61DAFB" strokeWidth="1.5" transform="rotate(120 12 12)" />
+    <circle cx="12" cy="12" r="2.2" fill="#61DAFB" />
   </svg>
 );
 
-// 2. HTML5 - #E34F26
+// 2. HTML5 - Official HTML5 Orange #E34F26
 export const HtmlBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M4.2 2H19.8L18.4 18.2L12 20L5.6 18.2L4.2 2Z" fill="#E34F26" />
-    <path d="M12 3.6V18.3L17.1 16.9L18.2 3.6H12Z" fill="#EF652A" />
-    <path d="M7.7 6.8H12V9.3H9.4L9.6 11.8H12V14.3H12L9.3 13.6L9.1 11.5H6.8L7.2 15.8L12 17.1L16.8 15.8L17.4 9.3H16.8H9.2" fill="white" />
-    <path d="M12 3.6H16.6L16.3 6.8H12V3.6ZM12 9.3H16.1L15.6 14.3L12 15.3V12.8" fill="#ECECEC" />
+    <path d="M3.8 2H20.2L18.7 18.8L12 20.8L5.3 18.8L3.8 2Z" fill="#E34F26" />
+    <path d="M12 3.6V19.1L17.4 17.6L18.5 3.6H12Z" fill="#EF652A" />
+    <path d="M7.6 6.8H16.4L16.2 9.2H10.1L10.3 11.6H15.9L15.3 15.6L12 16.5L8.7 15.6L8.5 13.3H6.2L6.6 17.8L12 19.3L17.4 17.8L18.3 6.8H7.6Z" fill="white" />
   </svg>
 );
 
-// 3. CSS3 - #1572B6
+// 3. CSS3 - Official CSS3 Blue #1572B6
 export const CssBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M4.2 2H19.8L18.4 18.2L12 20L5.6 18.2L4.2 2Z" fill="#1572B6" />
-    <path d="M12 3.6V18.3L17.1 16.9L18.2 3.6H12Z" fill="#33A9DC" />
-    <path d="M7.5 6.8H16.5L16.3 9.3H9.8L10 11.8H16.1L15.4 15.8L12 16.8L8.6 15.8L8.4 13.5H6.1L6.4 17.5L12 19L17.6 17.5L18.6 6.8H7.5Z" fill="white" />
+    <path d="M3.8 2H20.2L18.7 18.8L12 20.8L5.3 18.8L3.8 2Z" fill="#1572B6" />
+    <path d="M12 3.6V19.1L17.4 17.6L18.5 3.6H12Z" fill="#33A9DC" />
+    <path d="M7.6 6.8H16.4L16.2 9.2H10.1L10.3 11.6H15.9L15.3 15.6L12 16.5L8.7 15.6L8.5 13.3H6.2L6.6 17.8L12 19.3L17.4 17.8L18.3 6.8H7.6Z" fill="white" />
   </svg>
 );
 
-// 4. Python - #3776AB & #FFD43B
+// 4. Python - Official Python Blue #3776AB & Yellow #FFD43B
 export const PythonBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M11.8 2C6.8 2 7 4.2 7 4.2V6.4H12.2V7.1H5.1C5.1 5.1 2.8 5.6 2.8 10.6C2.8 15.6 4.9 15.3 4.9 15.3H6.4V13.1C6.4 13.1 6.3 10.5 8.9 10.5H14.1C14.1 10.5 16.5 10.6 16.5 8.3V4.2C16.5 4.2 16.7 2 11.8 2ZM9.5 3.5C10 3.5 10.4 3.9 10.4 4.4C10.4 4.9 10 5.3 9.5 5.3C9 5.3 8.6 4.9 8.6 4.4C8.6 3.9 9 3.5 9.5 3.5Z" fill="#3776AB" />
@@ -41,15 +40,15 @@ export const PythonBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6
   </svg>
 );
 
-// 5. C++ - #00599C
+// 5. C++ - Official ISO C++ Blue Hexagon Logo #00599C
 export const CPlusPlusBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 2L2 7.5V16.5L12 22L22 16.5V7.5L12 2Z" fill="#00599C" />
-    <path d="M8.5 15C6.6 15 5 13.4 5 11.5C5 9.6 6.6 8 8.5 8C9.8 8 10.9 8.7 11.5 9.8L9.8 10.8C9.5 10.3 9 10 8.5 10C7.7 10 7 10.7 7 11.5C7 12.3 7.7 13 8.5 13C9 13 9.5 12.7 9.8 12.2L11.5 13.2C10.9 14.3 9.8 15 8.5 15ZM13.5 12H15V13.5H16.5V12H18V10.5H16.5V9H15V10.5H13.5V12ZM17.5 12H19V13.5H20.5V12H22V10.5H20.5V9H19V10.5H17.5V12Z" fill="white" />
+    <path d="M12 2L2.5 7.5V16.5L12 22L21.5 16.5V7.5L12 2Z" fill="#00599C" />
+    <path d="M8.5 14.5C7 14.5 5.8 13.3 5.8 11.8C5.8 10.3 7 9.1 8.5 9.1C9.6 9.1 10.5 9.7 11 10.6L9.5 11.4C9.3 11 8.9 10.7 8.5 10.7C7.9 10.7 7.4 11.2 7.4 11.8C7.4 12.4 7.9 12.9 8.5 12.9C8.9 12.9 9.3 12.6 9.5 12.2L11 13C10.5 13.9 9.6 14.5 8.5 14.5ZM13 12.4H14.2V13.6H15.4V12.4H16.6V11.2H15.4V10H14.2V11.2H13V12.4ZM17.2 12.4H18.4V13.6H19.6V12.4H20.8V11.2H19.6V10H18.4V11.2H17.2V12.4Z" fill="white" />
   </svg>
 );
 
-// 6. Java - #ED8B00 & #5382A1
+// 6. Java - Official Oracle Java Coffee Logo #5382A1 & #ED8B00
 export const JavaBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M8.8 18.8C8.8 18.8 9.9 19.3 12.2 19.3C14.7 19.3 16.4 18.3 16.4 18.3C16.4 18.3 15.6 18.9 13.7 19.1C11.6 19.4 9.6 19.1 8.8 18.8Z" fill="#ED8B00" />
@@ -60,18 +59,18 @@ export const JavaBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" 
   </svg>
 );
 
-// 7. Linux - Official Tux / Yellow #FCC624
+// 7. Linux - Official Tux / Yellow #FCC624 & Black #111827
 export const LinuxBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M12 2C9.2 2 7 4.2 7 7C7 8.2 7.4 9.3 8.1 10.1C6.3 11.5 5 13.6 5 16C5 19.3 8.1 22 12 22C15.9 22 19 19.3 19 16C19 13.6 17.7 11.5 15.9 10.1C16.6 9.3 17 8.2 17 7C17 4.2 14.8 2 12 2Z" fill="#FCC624" />
-    <circle cx="10" cy="6.5" r="1" fill="#111827" />
-    <circle cx="14" cy="6.5" r="1" fill="#111827" />
-    <path d="M10.5 8.5C10.5 8.5 11.2 9.5 12 9.5C12.8 9.5 13.5 8.5 13.5 8.5H10.5Z" fill="#E65100" />
-    <path d="M8.5 14C8.5 14 10 17 12 17C14 17 15.5 14 15.5 14C15.5 14 14.5 18.5 12 18.5C9.5 18.5 8.5 14 8.5 14Z" fill="#FFFFFF" />
+    <circle cx="10" cy="6.5" r="1.2" fill="#111827" />
+    <circle cx="14" cy="6.5" r="1.2" fill="#111827" />
+    <path d="M10.5 8.5C10.5 8.5 11.2 9.8 12 9.8C12.8 9.8 13.5 8.5 13.5 8.5H10.5Z" fill="#E65100" />
+    <path d="M8.5 14C8.5 14 10 17.5 12 17.5C14 17.5 15.5 14 15.5 14C15.5 14 14.5 19 12 19C9.5 19 8.5 14 8.5 14Z" fill="#FFFFFF" />
   </svg>
 );
 
-// 8. MySQL - #00758F & #F29111
+// 8. MySQL - Official MySQL Dolphin Emblem #00758F & #F29111
 export const MySqlBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M12 3C7 3 3 5 3 7.5V16.5C3 19 7 21 12 21C17 21 21 19 21 16.5V7.5C21 5 17 3 12 3Z" fill="#00758F" />
@@ -80,7 +79,7 @@ export const MySqlBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6"
   </svg>
 );
 
-// 9. PostgreSQL - #4169E1 & #336791
+// 9. PostgreSQL - Official PostgreSQL Elephant Logo #4169E1 & #336791
 export const PostgreSqlBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2Z" fill="#336791" />
@@ -90,7 +89,7 @@ export const PostgreSqlBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6
   </svg>
 );
 
-// 10. SQL - #336791
+// 10. SQL - Official Database SQL Icon #336791
 export const SqlBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M12 3C7 3 3 4.8 3 7V17C3 19.2 7 21 12 21C17 21 21 19.2 21 17V7C21 4.8 17 3 12 3Z" fill="#336791" />
@@ -99,7 +98,7 @@ export const SqlBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" }
   </svg>
 );
 
-// 11. Adobe Photoshop - #31A8FF
+// 11. Adobe Photoshop - Official Ps Emblem #31A8FF & #001E36
 export const PhotoshopBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect width="20" height="20" x="2" y="2" rx="4" fill="#001E36" stroke="#31A8FF" strokeWidth="1.5" />
@@ -108,7 +107,7 @@ export const PhotoshopBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 
   </svg>
 );
 
-// 12. Adobe Illustrator - #FF9A00
+// 12. Adobe Illustrator - Official Ai Emblem #FF9A00 & #330000
 export const IllustratorBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect width="20" height="20" x="2" y="2" rx="4" fill="#330000" stroke="#FF9A00" strokeWidth="1.5" />
@@ -117,7 +116,7 @@ export const IllustratorBrandIcon: React.FC<BrandIconProps> = ({ className = "w-
   </svg>
 );
 
-// 13. Adobe After Effects - #9999FF
+// 13. Adobe After Effects - Official Ae Emblem #9999FF & #00005B
 export const AfterEffectsBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect width="20" height="20" x="2" y="2" rx="4" fill="#00005B" stroke="#9999FF" strokeWidth="1.5" />
@@ -126,7 +125,7 @@ export const AfterEffectsBrandIcon: React.FC<BrandIconProps> = ({ className = "w
   </svg>
 );
 
-// 14. Canva Pro - #00C4CC
+// 14. Canva Pro - Official Canva Gradient Emblem #00C4CC & #7D2AE8
 export const CanvaBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect width="20" height="20" x="2" y="2" rx="6" fill="url(#canvaGrad)" />
@@ -140,7 +139,7 @@ export const CanvaBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6"
   </svg>
 );
 
-// 15. Graphic Designing Palette - #FF4081
+// 15. Graphic Designing Palette - Official Design Emblem #EC4899 & #8B5CF6
 export const DesignPaletteBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C13.4 22 14.5 20.9 14.5 19.5C14.5 18.8 14.2 18.2 13.7 17.7C13.3 17.3 13 16.7 13 16C13 14.6 14.1 13.5 15.5 13.5H18C20.2 13.5 22 11.7 22 9.5C22 5.4 17.5 2 12 2Z" fill="url(#paletteGrad)" />
@@ -165,7 +164,7 @@ export const VideoEditingBrandIcon: React.FC<BrandIconProps> = ({ className = "w
   </svg>
 );
 
-// 17. Mobile App Dev / Android - #3DDC84
+// 17. Mobile App Dev / Android - Official Android Green #3DDC84
 export const AndroidBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M6 10V18C6 19.1 6.9 20 8 20H16C17.1 20 18 19.1 18 18V10H6Z" fill="#3DDC84" />
@@ -176,7 +175,7 @@ export const AndroidBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-
   </svg>
 );
 
-// 18. Antigravity AI - #00F0FF
+// 18. Antigravity AI - Official AI Bot #00F0FF & #A855F7
 export const AntigravityBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="12" cy="12" r="9" fill="url(#antiGrad)" />
@@ -191,7 +190,7 @@ export const AntigravityBrandIcon: React.FC<BrandIconProps> = ({ className = "w-
   </svg>
 );
 
-// 19. Web Development Globe - #00F0FF
+// 19. Web Development Globe - #38BDF8
 export const WebDevBrandIcon: React.FC<BrandIconProps> = ({ className = "w-6 h-6" }) => (
   <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="12" cy="12" r="9" stroke="#38BDF8" strokeWidth="1.5" />

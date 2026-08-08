@@ -23,6 +23,25 @@ export function App() {
   const [certifications, setCertifications] = useState<Certification[]>([]);
   const [chatOpen, setChatOpen] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
+    return (localStorage.getItem('theme') as 'dark' | 'light') || 'dark';
+  });
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (theme === 'light') {
+      root.classList.add('light');
+      root.classList.remove('dark');
+    } else {
+      root.classList.add('dark');
+      root.classList.remove('light');
+    }
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  };
 
   useEffect(() => {
     async function loadData() {
@@ -69,7 +88,11 @@ export function App() {
       <BackgroundGrid />
 
       {/* Navigation Header */}
-      <Navbar onOpenChat={() => setChatOpen(true)} />
+      <Navbar
+        onOpenChat={() => setChatOpen(true)}
+        theme={theme}
+        onToggleTheme={toggleTheme}
+      />
 
       {/* Main Sections */}
       <main className="relative z-10 space-y-12">
