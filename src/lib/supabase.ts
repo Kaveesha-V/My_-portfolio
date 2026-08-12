@@ -192,8 +192,9 @@ export async function sendChatMessage(
   await new Promise((res) => setTimeout(res, 600));
   const query = userQuery.toLowerCase();
 
-  if (query.includes('project') || query.includes('work') || query.includes('built') || query.includes('showcase')) {
-    return `Kaveesha has built several software & game projects:
+  if (query.includes('project') || query.includes('work') || query.includes('built') || query.includes('showcase') || query.includes('sniffer') || query.includes('packet')) {
+    return `Kaveesha has built several software & cybersecurity projects:
+• **CLI Network Packet Sniffer**: Custom CLI network packet sniffer built in Python using Scapy for real-time packet inspection (IP, TCP, UDP, ICMP), deep header decoding, filtering, and session data logging (.json/.txt).
 • **Fertilizer Shop Management System**: Full-stack system managing inventory, stock levels, sales, and customer invoicing (1-year ongoing project).
 • **Movies & Games Review Platform**: Unified tracker with live TMDb & Steam APIs, custom Watched/Completed and Unwatched/Backlog lists, plus a Buy Now, Pay Later (BNPL) wishlist payment roadmap!
 • **2D Game Development (Raylib)**: 2D game built in C++ leveraging the Raylib graphics engine.

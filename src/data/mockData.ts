@@ -62,6 +62,24 @@ export const MOCK_SKILLS: Skill[] = [
 
 export const MOCK_PROJECTS: Project[] = [
   {
+    id: 'proj-sniffer',
+    title: 'CLI Network Packet Sniffer',
+    description: 'A CLI-based Network Packet Sniffer built in Python & Scapy to intercept, inspect, and decode real-time network traffic across IP, TCP, UDP, and ICMP protocols.',
+    longDescription: 'A custom command-line network packet sniffer developed in Python using Scapy for real-time traffic capture, inspection, and protocol dissection. Designed for security auditing, threat detection, and network troubleshooting, it operates at low network layers with granular CLI filtering (interface, protocol, packet limits) and structured session data logging (.json / .txt).',
+    tags: ['Python', 'Scapy', 'Cyber Security', 'Network Security', 'CLI'],
+    category: 'Cyber Security',
+    imageUrl: '/packet-sniffer.png',
+    githubUrl: 'https://github.com/Kaveesha-V',
+    featured: true,
+    architectureHighlights: [
+      'Real-time multi-protocol packet parsing for IP, TCP, UDP, and ICMP network traffic',
+      'Deep packet decoding extracting IP addresses, ports, TTL, TCP flags, and raw payloads',
+      'Granular CLI filtering and structured session logging to .json and .txt files',
+      'Low-level raw socket operations via elevated administrator privileges in Miniconda environment'
+    ],
+    metrics: '🔍 Python & Scapy | CLI Packet Sniffer'
+  },
+  {
     id: 'proj-1',
     title: 'Fertilizer Shop Management System',
     description: 'A full-stack management system designed for inventory, sales, and customer tracking in a fertilizer shop.',
