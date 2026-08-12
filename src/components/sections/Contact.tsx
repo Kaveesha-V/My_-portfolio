@@ -46,7 +46,7 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
           particleCount: 80,
           spread: 70,
           origin: { y: 0.6 },
-          colors: ['#06b6d4', '#3b82f6', '#10b981', '#a855f7'],
+          colors: ['#88ec11', '#70e000', '#ffffff'],
         });
       } else {
         setStatus({ type: 'error', message: result.error || 'Failed to send message. Please try again.' });
@@ -58,20 +58,20 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
+    <section id="contact" className="py-24 relative overflow-hidden bg-[#0b0b0c]">
       {/* Background Decorative Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-cyan-500/10 via-purple-500/10 to-emerald-500/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#88EC11]/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimatedSection className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono-code mb-4">
-            <Sparkles className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#88EC11]/10 border border-[#88EC11]/30 text-[#88EC11] text-xs font-mono-code mb-4">
+            <Sparkles className="w-4 h-4 text-[#88EC11]" />
             <span>GET IN TOUCH</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-outfit">
-            Let's Build Something <span className="bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">Extraordinary</span>
+            Let's Build Something <span className="text-[#88EC11] drop-shadow-[0_0_20px_rgba(136,236,17,0.35)]">Extraordinary</span>
           </h2>
-          <p className="mt-4 text-slate-300 max-w-2xl mx-auto text-sm sm:text-base">
+          <p className="mt-4 text-slate-300 max-w-2xl mx-auto text-sm sm:text-base font-jakarta">
             Have a project, security audit requirement, or collaboration in mind? Feel free to send a message or connect directly.
           </p>
         </AnimatedSection>
@@ -80,30 +80,30 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
 
           {/* Left Column: Direct Contact & Social Cards */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            <div className="glass-card p-8 rounded-3xl border border-white/10 flex flex-col gap-6">
+            <div className="glass-card p-8 rounded-3xl border border-white/10 flex flex-col gap-6 bg-[#18181c]">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                <div className="w-12 h-12 rounded-2xl bg-[#88EC11]/15 border border-[#88EC11]/30 flex items-center justify-center text-[#88EC11]">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white text-lg">Direct Email</h3>
+                  <h3 className="font-bold text-white text-lg font-kumbh">Direct Email</h3>
                   <a
                     href={`mailto:${profile.email}`}
-                    className="text-xs font-mono-code text-cyan-400 hover:underline"
+                    className="text-xs font-mono-code text-[#88EC11] hover:underline font-semibold"
                   >
                     {profile.email}
                   </a>
                 </div>
               </div>
-              <p className="text-xs text-slate-300 leading-relaxed">
+              <p className="text-xs text-slate-300 leading-relaxed font-jakarta">
                 Response time is typically within 24 hours. For urgent technical consulting or hiring inquiries, feel free to reach out directly.
               </p>
             </div>
 
             {/* Social Channels */}
-            <div className="glass-card p-8 rounded-3xl border border-white/10">
-              <h3 className="font-bold text-white text-base mb-4 flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-purple-400" />
+            <div className="glass-card p-8 rounded-3xl border border-white/10 bg-[#18181c]">
+              <h3 className="font-bold text-white text-base mb-4 flex items-center gap-2 font-kumbh">
+                <Sparkles className="w-4 h-4 text-[#88EC11]" />
                 <span>Connect & Follow</span>
               </h3>
               <div className="grid grid-cols-3 gap-3">
@@ -111,31 +111,31 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
                   href={profile.socials.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 hover:bg-cyan-950/20 transition-all group"
+                  className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:border-white/50 hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] transition-all group"
                 >
-                  <GithubIcon className="w-6 h-6 mb-2 group-hover:scale-110 transition-transform" />
-                  <span className="text-[10px] font-mono-code">GitHub</span>
+                  <GithubIcon className="w-6 h-6 mb-2 text-slate-200 group-hover:scale-110 transition-transform" />
+                  <span className="text-[10px] font-mono-code font-bold">GitHub</span>
                 </a>
 
                 <a
                   href={profile.socials.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 hover:bg-cyan-950/20 transition-all group"
+                  className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-300 hover:text-[#0A66C2] hover:border-[#0A66C2]/60 hover:bg-[#0A66C2]/15 hover:shadow-[0_0_20px_rgba(10,102,194,0.4)] transition-all group"
                 >
-                  <LinkedinIcon className="w-6 h-6 mb-2 group-hover:scale-110 transition-transform" />
-                  <span className="text-[10px] font-mono-code">LinkedIn</span>
+                  <LinkedinIcon className="w-6 h-6 mb-2 group-hover:scale-110 group-hover:text-[#0A66C2] transition-all" />
+                  <span className="text-[10px] font-mono-code font-bold group-hover:text-[#0A66C2]">LinkedIn</span>
                 </a>
 
                 <a
                   href={profile.socials.whatsapp || 'https://wa.me/94765502806'}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-300 hover:text-emerald-400 hover:border-emerald-500/40 hover:bg-emerald-950/20 transition-all group"
+                  className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white/5 border border-white/10 text-slate-300 hover:text-[#25D366] hover:border-[#25D366]/60 hover:bg-[#25D366]/15 hover:shadow-[0_0_20px_rgba(37,211,102,0.4)] transition-all group"
                   title="Connect & Follow on WhatsApp (0765502806)"
                 >
-                  <WhatsappIcon className="w-6 h-6 mb-2 text-emerald-400 group-hover:scale-110 transition-transform" />
-                  <span className="text-[10px] font-mono-code">WhatsApp</span>
+                  <WhatsappIcon className="w-6 h-6 mb-2 text-emerald-400 group-hover:scale-110 group-hover:text-[#25D366] transition-all" />
+                  <span className="text-[10px] font-mono-code font-bold group-hover:text-[#25D366]">WhatsApp</span>
                 </a>
               </div>
             </div>
@@ -143,11 +143,11 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
 
           {/* Right Column: Contact Form */}
           <div className="lg:col-span-7">
-            <form onSubmit={handleSubmit} className="glass-card p-8 rounded-3xl border border-white/10 space-y-6">
+            <form onSubmit={handleSubmit} className="glass-card p-8 rounded-3xl border border-white/10 space-y-6 bg-[#18181c]">
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-xs font-mono-code text-slate-300 uppercase tracking-wider mb-2">
+                  <label className="block text-xs font-mono-code text-slate-300 uppercase tracking-wider mb-2 font-bold">
                     Your Name *
                   </label>
                   <input
@@ -157,12 +157,12 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
                     onChange={handleChange}
                     placeholder="e.g. Sarah Connor"
                     required
-                    className="w-full px-4 py-3 rounded-xl glass-input text-sm"
+                    className="w-full px-4 py-3 rounded-xl glass-input text-sm font-jakarta"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono-code text-slate-300 uppercase tracking-wider mb-2">
+                  <label className="block text-xs font-mono-code text-slate-300 uppercase tracking-wider mb-2 font-bold">
                     Email Address *
                   </label>
                   <input
@@ -172,13 +172,13 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
                     onChange={handleChange}
                     placeholder="e.g. sarah@domain.com"
                     required
-                    className="w-full px-4 py-3 rounded-xl glass-input text-sm"
+                    className="w-full px-4 py-3 rounded-xl glass-input text-sm font-jakarta"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-mono-code text-slate-300 uppercase tracking-wider mb-2">
+                <label className="block text-xs font-mono-code text-slate-300 uppercase tracking-wider mb-2 font-bold">
                   Subject
                 </label>
                 <input
@@ -186,13 +186,13 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  placeholder="e.g. Full-Stack Role / AI Project Collaboration"
-                  className="w-full px-4 py-3 rounded-xl glass-input text-sm"
+                  placeholder="e.g. Cybersecurity Audit / Full-Stack Project Collaboration"
+                  className="w-full px-4 py-3 rounded-xl glass-input text-sm font-jakarta"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-mono-code text-slate-300 uppercase tracking-wider mb-2">
+                <label className="block text-xs font-mono-code text-slate-300 uppercase tracking-wider mb-2 font-bold">
                   Message *
                 </label>
                 <textarea
@@ -202,7 +202,7 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
                   rows={5}
                   placeholder="Tell me about your project or goal..."
                   required
-                  className="w-full px-4 py-3 rounded-xl glass-input text-sm resize-none"
+                  className="w-full px-4 py-3 rounded-xl glass-input text-sm resize-none font-jakarta"
                 />
               </div>
 
@@ -213,13 +213,14 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className={`p-4 rounded-xl flex items-center gap-3 text-xs font-mono-code ${status.type === 'success'
-                        ? 'bg-emerald-950/60 border border-emerald-500/40 text-emerald-300'
+                    className={`p-4 rounded-xl flex items-center gap-3 text-xs font-mono-code ${
+                      status.type === 'success'
+                        ? 'bg-[#88EC11]/15 border border-[#88EC11]/40 text-[#88EC11]'
                         : 'bg-rose-950/60 border border-rose-500/40 text-rose-300'
-                      }`}
+                    }`}
                   >
                     {status.type === 'success' ? (
-                      <CheckCircle className="w-5 h-5 text-emerald-400 shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-[#88EC11] shrink-0" />
                     ) : (
                       <AlertCircle className="w-5 h-5 text-rose-400 shrink-0" />
                     )}
@@ -232,13 +233,13 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-black font-bold text-sm tracking-wide shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.01] active:scale-95 transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+                className="w-full py-4 rounded-xl bg-[#88EC11] text-[#0b0b0c] font-black text-sm tracking-wide shadow-xl shadow-[#88EC11]/30 hover:bg-[#70E000] hover:scale-[1.01] active:scale-95 transition-all flex items-center justify-center gap-2 disabled:opacity-50"
               >
                 {loading ? (
-                  <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin" />
+                  <div className="w-5 h-5 border-2 border-[#0b0b0c] border-t-transparent rounded-full animate-spin" />
                 ) : (
                   <>
-                    <Send className="w-4 h-4" />
+                    <Send className="w-4 h-4 text-[#0b0b0c]" />
                     <span>Send Message</span>
                   </>
                 )}

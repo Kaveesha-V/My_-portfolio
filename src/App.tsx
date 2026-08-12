@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BackgroundGrid } from './components/common/BackgroundGrid';
+import { CustomCursor } from './components/common/CustomCursor';
 import { Navbar } from './components/common/Navbar';
 import { Hero } from './components/sections/Hero';
 import { About } from './components/sections/About';
@@ -69,12 +70,12 @@ export function App() {
 
   if (loading || !profile) {
     return (
-      <div className="min-h-screen bg-[#090a10] flex items-center justify-center">
+      <div className="min-h-screen bg-[#0b0b0c] flex items-center justify-center">
         <div className="flex flex-col items-center gap-4">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-400 to-purple-600 p-[2px] animate-spin">
-            <div className="w-full h-full bg-[#090a10] rounded-[14px]" />
+          <div className="w-12 h-12 rounded-full border-2 border-[#88EC11] border-t-transparent animate-spin flex items-center justify-center">
+            <div className="w-4 h-4 rounded-full bg-[#88EC11]" />
           </div>
-          <span className="text-xs font-mono-code text-cyan-400 tracking-widest uppercase">
+          <span className="text-xs font-mono-code text-[#88EC11] tracking-widest uppercase font-bold">
             Initialising Portfolio Engine...
           </span>
         </div>
@@ -83,7 +84,11 @@ export function App() {
   }
 
   return (
-    <div className="relative min-h-screen bg-[#090a10] text-slate-100 selection:bg-cyan-400 selection:text-black">
+    <div className="relative min-h-screen bg-[#0b0b0c] text-slate-100 selection:bg-[#88EC11] selection:text-[#0b0b0c]">
+      
+      {/* Interactive Mouse Cursor & Spotlight */}
+      <CustomCursor />
+
       {/* Dynamic Background Mesh */}
       <BackgroundGrid />
 
@@ -116,11 +121,11 @@ export function App() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setChatOpen(true)}
-          className="fixed bottom-6 right-6 z-40 p-4 rounded-2xl bg-gradient-to-br from-cyan-400 to-purple-600 text-black font-bold shadow-2xl shadow-cyan-500/40 border border-white/20 flex items-center justify-center group"
+          className="fixed bottom-6 right-6 z-40 p-4 rounded-full bg-[#88EC11] text-[#0b0b0c] font-bold shadow-2xl shadow-[#88EC11]/40 border border-[#88EC11]/50 flex items-center justify-center group"
           aria-label="Open AI Assistant"
         >
-          <Bot className="w-6 h-6 text-black group-hover:rotate-12 transition-transform" />
-          <span className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-cyan-300 border-2 border-black animate-ping" />
+          <Bot className="w-6 h-6 text-[#0b0b0c] group-hover:rotate-12 transition-transform" />
+          <span className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-white border-2 border-[#0b0b0c] animate-ping" />
         </motion.button>
       )}
 

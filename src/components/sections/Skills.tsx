@@ -40,25 +40,25 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
     if (nameLower.includes('c++')) return <CPlusPlusBrandIcon className="w-8 h-8" />;
     if (nameLower.includes('web development') || nameLower.includes('web')) return <img src="/Logos/HTML.png" alt="Web Development" className="w-8 h-8 object-contain rounded-md" />;
 
-    return <Code className="w-6 h-6 text-purple-400" />;
+    return <Code className="w-6 h-6 text-[#88EC11]" />;
   };
 
   return (
-    <AnimatedSection id="skills" className="py-24 relative bg-[#0a0a12]/50">
+    <AnimatedSection id="skills" className="py-24 relative bg-[#0b0b0c]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-12">
-          <span className="text-xs font-mono-code text-purple-400 tracking-widest uppercase mb-2">
-            // 02. Tech Stack & Skills
+          <span className="text-xs font-mono-code text-[#88EC11] tracking-widest uppercase mb-2 font-semibold">
+            // 02. Skills
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
-            Technologies & <span className="text-gradient-purple">Tooling</span>
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-white">
+            Tech Stack & <span className="text-[#88EC11]">Tools</span>
           </h2>
-          <p className="text-sm text-slate-400 max-w-xl mt-3">
-            Handcrafted suite of modern frameworks, languages, databases, and AI libraries.
+          <p className="text-sm text-slate-300 max-w-xl mt-3 font-jakarta">
+            Handcrafted suite of modern frameworks, languages, databases, cybersecurity tools, and design software.
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-cyan-400 rounded-full mt-4" />
+          <div className="w-20 h-1 bg-[#88EC11] rounded-full mt-4" />
         </div>
 
         {/* Filter Category Tabs */}
@@ -69,10 +69,11 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`relative px-5 py-2.5 rounded-full text-xs font-mono-code font-semibold transition-all duration-200 ${isActive
-                    ? 'text-black bg-gradient-to-r from-cyan-400 to-purple-400 shadow-lg shadow-cyan-500/20 scale-105'
+                className={`relative px-5 py-2.5 rounded-full text-xs font-mono-code font-bold transition-all duration-200 ${
+                  isActive
+                    ? 'text-[#0b0b0c] bg-[#88EC11] shadow-lg shadow-[#88EC11]/25 scale-105'
                     : 'text-slate-400 bg-white/5 border border-white/10 hover:text-white hover:bg-white/10'
-                  }`}
+                }`}
               >
                 {cat}
               </button>
@@ -94,18 +95,18 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="glass-card p-6 rounded-2xl border border-white/10 flex flex-col justify-between group hover:border-purple-500/40"
+                className="glass-card p-6 rounded-2xl border border-white/10 flex flex-col justify-between group hover:border-[#88EC11]/40 bg-[#18181c]"
               >
                 <div>
                   <div className="flex items-center gap-3.5 mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:scale-110 group-hover:bg-white/10 transition-all shrink-0 shadow-inner overflow-hidden p-1.5">
+                    <div className="p-2.5 rounded-xl bg-[#0b0b0c] border border-white/10 flex items-center justify-center shrink-0 group-hover:border-[#88EC11]/60 group-hover:scale-110 group-hover:shadow-[0_0_18px_rgba(136,236,17,0.35)] transition-all duration-300 overflow-hidden">
                       {getSkillLogo(skill.name)}
                     </div>
                     <div>
-                      <h3 className="font-bold text-white text-base group-hover:text-cyan-400 transition-colors">
+                      <h3 className="text-base font-bold text-white font-kumbh group-hover:text-[#88EC11] transition-colors">
                         {skill.name}
                       </h3>
-                      <span className="text-[10px] font-mono-code text-slate-400">
+                      <span className="text-[10px] font-mono-code text-[#88EC11] font-semibold block">
                         {skill.category}
                       </span>
                     </div>
