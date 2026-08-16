@@ -5,7 +5,7 @@ export const BackgroundGrid: React.FC = () => {
   const rainCanvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
-    // 1. Digital Rain Background Layer Setup
+    // 1. Terminal Hacking Digital Rain Canvas Setup
     const rainCanvas = rainCanvasRef.current;
     if (!rainCanvas) return;
 
@@ -16,9 +16,10 @@ export const BackgroundGrid: React.FC = () => {
     let rainWidth = (rainCanvas.width = window.innerWidth);
     let rainHeight = (rainCanvas.height = window.innerHeight);
 
-    const charSet = '01{}<>/=$#@%&!XYZABC';
+    // Terminal hacking glyphs: numbers, hex, binary, and code symbols
+    const charSet = '0123456789ABCDEF01{}<>/=$#@%&!*+';
     const fontSize = 12;
-    const colSpacing = 36;
+    const colSpacing = 42;
 
     interface RainDrop {
       x: number;
@@ -27,21 +28,28 @@ export const BackgroundGrid: React.FC = () => {
       length: number;
       chars: string[];
       active: boolean;
+      flickerCounter: number;
+      flickerInterval: number;
     }
+
+    const getRandomChar = () => charSet[Math.floor(Math.random() * charSet.length)];
 
     const initRainDrops = (): RainDrop[] => {
       const drops: RainDrop[] = [];
       const numCols = Math.floor(rainWidth / colSpacing);
       for (let i = 0; i < numCols; i++) {
-        const active = i % 2 === 0 || i % 5 === 0; // Sparse ambient density (not dense)
-        const length = Math.floor(4 + Math.random() * 6);
+        // Sparse ambient density (~35% of columns active for subtle texture)
+        const active = i % 3 === 0 || i % 7 === 0;
+        const length = Math.floor(5 + Math.random() * 6); // 5 to 10 chars
         drops.push({
-          x: i * colSpacing + 12,
+          x: i * colSpacing + Math.random() * 8,
           y: Math.random() * -rainHeight * 1.5,
-          speed: 1.0 + Math.random() * 1.6,
+          speed: 0.3 + Math.random() * 0.5, // Slow calm velocity: 0.3px to 0.8px per frame
           length,
-          chars: Array.from({ length: 12 }, () => charSet[Math.floor(Math.random() * charSet.length)]),
+          chars: Array.from({ length: 12 }, getRandomChar),
           active,
+          flickerCounter: 0,
+          flickerInterval: Math.floor(4 + Math.random() * 10),
         });
       }
       return drops;
@@ -68,6 +76,14 @@ export const BackgroundGrid: React.FC = () => {
         const drop = rainDrops[i];
         if (!drop.active) continue;
 
+        // Terminal Decrypting / Character Flicker Effect
+        drop.flickerCounter++;
+        if (drop.flickerCounter >= drop.flickerInterval) {
+          drop.flickerCounter = 0;
+          const mutateIndex = Math.floor(Math.random() * drop.length);
+          drop.chars[mutateIndex] = getRandomChar();
+        }
+
         for (let j = 0; j < drop.length; j++) {
           const charY = drop.y - j * fontSize;
 
@@ -77,14 +93,22 @@ export const BackgroundGrid: React.FC = () => {
               ? Math.max(0, 1 - (charY - rainHeight * 0.75) / (rainHeight * 0.25)) 
               : 1;
 
-            // Extremely low ambient opacity (10-15%)
-            const trailAlpha = (1 - j / drop.length) * 0.12 * bottomFade;
+            // Low ambient opacity (10-15% base opacity)
+            const trailAlpha = (1 - j / drop.length) * 0.13 * bottomFade;
 
             if (trailAlpha > 0.005) {
               const isTip = j === 0;
-              rainCtx.fillStyle = isLight
-                ? (isTip ? `rgba(15, 23, 42, ${0.16 * bottomFade})` : `rgba(100, 116, 139, ${trailAlpha * 0.8})`)
-                : (isTip ? `rgba(180, 255, 100, ${0.18 * bottomFade})` : `rgba(136, 236, 17, ${trailAlpha})`);
+
+              if (isLight) {
+                rainCtx.fillStyle = isTip 
+                  ? `rgba(15, 23, 42, ${0.25 * bottomFade})` 
+                  : `rgba(100, 116, 139, ${trailAlpha * 0.8})`;
+              } else {
+                // Brighter leading head character (~28-35% opacity) with dark-green trail fading out
+                rainCtx.fillStyle = isTip 
+                  ? `rgba(200, 255, 120, ${0.32 * bottomFade})` 
+                  : `rgba(136, 236, 17, ${trailAlpha})`;
+              }
 
               const char = drop.chars[j % drop.chars.length];
               rainCtx.fillText(char, drop.x, charY);
@@ -97,8 +121,10 @@ export const BackgroundGrid: React.FC = () => {
         // Reset drop to top staggered when it falls past screen
         if (drop.y - drop.length * fontSize > rainHeight) {
           drop.y = -Math.random() * 300 - 50;
-          drop.speed = 1.0 + Math.random() * 1.6;
-          drop.chars = Array.from({ length: 12 }, () => charSet[Math.floor(Math.random() * charSet.length)]);
+          drop.speed = 0.3 + Math.random() * 0.5;
+          drop.length = Math.floor(5 + Math.random() * 6);
+          drop.chars = Array.from({ length: 12 }, getRandomChar);
+          drop.flickerInterval = Math.floor(4 + Math.random() * 10);
         }
       }
 
@@ -201,7 +227,7 @@ export const BackgroundGrid: React.FC = () => {
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-      {/* Subtle Ambient Digital Rain Canvas Layer */}
+      {/* Slow Hacking Terminal Digital Rain Canvas Layer */}
       <canvas ref={rainCanvasRef} className="absolute inset-0 w-full h-full opacity-80" />
 
       {/* Dynamic Animated Canvas Constellation Mesh */}
