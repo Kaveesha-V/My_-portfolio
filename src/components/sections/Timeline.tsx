@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import { AnimatedSection } from '../common/AnimatedSection';
 import type { Experience } from '../../types';
 import { Briefcase, Calendar, MapPin, ChevronRight, Folder, ExternalLink, GraduationCap } from 'lucide-react';
@@ -9,6 +9,19 @@ interface TimelineProps {
 }
 
 export const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start 75%', 'end 50%'],
+  });
+
+  const scaleY = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   return (
     <AnimatedSection id="experience" className="py-24 relative bg-[#0b0b0c]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,9 +41,41 @@ export const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
         </div>
 
         {/* Vertical Timeline Container */}
-        <div className="relative pl-6 sm:pl-8 border-l-2 border-white/20 dark:border-white/20 border-slate-400 timeline-line space-y-12 ml-2 sm:ml-4">
+        <div ref={containerRef} className="relative pl-10 sm:pl-14 space-y-12 ml-1 sm:ml-2">
           
-          {/* Education Node */}
+          {/* Base vertical connector line with smooth top & bottom gradient fade */}
+          <div 
+            className="absolute left-[15px] sm:left-[23px] top-3 bottom-3 w-[2px] pointer-events-none z-0"
+            style={{
+              background: 'linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.15) 10%, rgba(255, 255, 255, 0.15) 90%, transparent 100%)'
+            }}
+          />
+
+          {/* Scroll-revealed active accent line */}
+          <motion.div
+            style={{
+              scaleY,
+              transformOrigin: 'top',
+              background: 'linear-gradient(to bottom, transparent 0%, rgba(136, 236, 17, 0.85) 10%, rgba(136, 236, 17, 0.85) 90%, transparent 100%)',
+              boxShadow: '0 0 10px rgba(136, 236, 17, 0.5)'
+            }}
+            className="absolute left-[15px] sm:left-[23px] top-3 bottom-3 w-[2px] pointer-events-none z-0"
+          />
+
+          {/* Continuous animated flowing light pulse */}
+          <div className="absolute left-[15px] sm:left-[23px] top-3 bottom-3 w-[2px] overflow-hidden pointer-events-none z-0">
+            <motion.div
+              animate={{ y: ['-100%', '350%'] }}
+              transition={{
+                duration: 3.5,
+                repeat: Infinity,
+                ease: 'linear',
+              }}
+              className="w-full h-36 bg-gradient-to-b from-transparent via-[#88EC11] to-transparent shadow-[0_0_12px_#88EC11] opacity-90"
+            />
+          </div>
+
+          {/* Node 1: Education (University of Kelaniya) */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -38,14 +83,16 @@ export const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
             transition={{ duration: 0.5 }}
             className="relative group"
           >
-            <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-6 h-6 rounded-full border-2 bg-[#88EC11] border-[#88EC11] shadow-lg shadow-[#88EC11]/50 flex items-center justify-center">
-              <GraduationCap className="w-3.5 h-3.5 text-[#0b0b0c]" />
+            {/* Consistent Timeline Indicator Node */}
+            <div className="absolute left-[-25px] sm:left-[-33px] top-2 -translate-x-1/2 w-7 h-7 rounded-full border-2 border-[#88EC11] bg-[#0b0b0c] shadow-[0_0_14px_rgba(136,236,17,0.5)] flex items-center justify-center z-10 transition-transform duration-300 group-hover:scale-125">
+              <div className="w-2.5 h-2.5 rounded-full bg-[#88EC11] shadow-[0_0_8px_#88EC11]" />
             </div>
 
-            <div className="glass-card p-6 sm:p-8 rounded-3xl border border-[#88EC11]/30 bg-[#18181c]">
+            <div className="glass-card p-6 sm:p-8 rounded-3xl border border-[#88EC11]/30 bg-[#18181c] group-hover:border-[#88EC11]/50 transition-all">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                 <div>
-                  <span className="text-xs font-mono-code text-[#88EC11] font-bold uppercase tracking-wider block">
+                  <span className="text-xs font-mono-code text-[#88EC11] font-bold uppercase tracking-wider flex items-center gap-1.5">
+                    <GraduationCap className="w-4 h-4 text-[#88EC11]" />
                     University of Kelaniya
                   </span>
                   <h3 className="text-xl font-extrabold text-white font-kumbh mt-1">
@@ -63,23 +110,19 @@ export const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
             </div>
           </motion.div>
 
-          {/* Work Experiences */}
+          {/* Nodes 2 & 3: Work Experiences (Bank Internship & Freelance) */}
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.id}
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
+              transition={{ duration: 0.5, delay: (index + 1) * 0.15 }}
               className="relative group"
             >
-              {/* Timeline Indicator Node */}
-              <div className={`absolute -left-[31px] sm:-left-[39px] top-1.5 w-6 h-6 rounded-full border-2 flex items-center justify-center transition-transform group-hover:scale-125 ${
-                exp.current
-                  ? 'bg-[#88EC11] border-[#88EC11] shadow-lg shadow-[#88EC11]/50'
-                  : 'bg-[#0b0b0c] border-[#88EC11]/60 text-[#88EC11]'
-              }`}>
-                <div className={`w-2 h-2 rounded-full ${exp.current ? 'bg-[#0b0b0c] animate-ping' : 'bg-[#88EC11]'}`} />
+              {/* Consistent Timeline Indicator Node */}
+              <div className="absolute left-[-25px] sm:left-[-33px] top-2 -translate-x-1/2 w-7 h-7 rounded-full border-2 border-[#88EC11] bg-[#0b0b0c] shadow-[0_0_14px_rgba(136,236,17,0.5)] flex items-center justify-center z-10 transition-transform duration-300 group-hover:scale-125">
+                <div className="w-2.5 h-2.5 rounded-full bg-[#88EC11] shadow-[0_0_8px_#88EC11]" />
               </div>
 
               {/* Card Container */}
