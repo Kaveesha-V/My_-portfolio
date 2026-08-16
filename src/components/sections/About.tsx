@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { AnimatedSection } from '../common/AnimatedSection';
 import type { Profile } from '../../types';
-import { Code2, MapPin, Mail, Sparkles, BookOpen, Palette, GraduationCap, ShieldCheck, Terminal } from 'lucide-react';
+import { Code2, MapPin, Mail, Sparkles, Palette, GraduationCap, ShieldCheck, Terminal } from 'lucide-react';
 
 interface AboutProps {
   profile: Profile;
@@ -96,7 +96,7 @@ export const About: React.FC<AboutProps> = ({ profile }) => {
                 <span>Technical Profile</span>
               </h3>
               <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-jakarta">
-                I am an IT Undergraduate at the University of Kelaniya with a strong focus on building secure and efficient digital solutions. My technical interests span modern web development, comprehensive cybersecurity practices, and high-performance game development using C++ and Raylib. I complement my engineering background with proven skills in graphic design and video editing, allowing me to create both technically robust and visually compelling user experiences.
+                I am an IT Undergraduate at the University of Kelaniya with a strong focus on building secure, user-friendly, and efficient digital solutions. My technical interests span modern web development, responsive front-end design, comprehensive cybersecurity practices, and full-stack web applications. I complement my engineering background with proven skills in graphic design and video editing, allowing me to create both technically robust and visually compelling user experiences.
               </p>
             </div>
 
@@ -114,11 +114,11 @@ export const About: React.FC<AboutProps> = ({ profile }) => {
 
               <div className="glass-card p-5 rounded-2xl border border-white/10 flex flex-col gap-2.5 bg-[#18181c]">
                 <div className="w-10 h-10 rounded-xl bg-[#88EC11]/15 flex items-center justify-center text-[#88EC11] border border-[#88EC11]/30">
-                  <BookOpen className="w-5 h-5" />
+                  <Code2 className="w-5 h-5" />
                 </div>
-                <h4 className="font-bold text-white text-sm font-kumbh">Continuous Learning</h4>
+                <h4 className="font-bold text-white text-sm font-kumbh">Web Development</h4>
                 <p className="text-xs text-slate-300 leading-relaxed font-jakarta">
-                  Actively expanding technical skills in Java, C++, SQL databases, and game engine mechanics.
+                  Building clean, responsive web user interfaces with HTML, CSS, JavaScript, React, and relational SQL databases.
                 </p>
               </div>
 

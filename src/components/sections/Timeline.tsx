@@ -113,7 +113,7 @@ export const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
                 </span>
               </div>
               <p className="text-sm text-slate-300 font-jakarta leading-relaxed">
-                Focusing on software engineering, industrial management IT applications, cybersecurity principles, database management systems, and low-level game development in C++.
+                Focusing on software engineering, web application development, cybersecurity principles, database management systems, and modern front-end technologies.
               </p>
             </div>
           </motion.div>

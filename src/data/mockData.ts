@@ -11,7 +11,7 @@ export const MOCK_PROFILE: Profile = {
     "Crafting High-Performance User Interfaces",
     "Graphic Designer"
   ],
-  bio: "BSc (Hons) in IT student at the University of Kelaniya (Industrial Management). I am focused on Cybersecurity and Game Development and still learning more details of Java, C++ , and SQL. I enjoy solving complex problems, whether it's securing a network or coding game logic, and I'm looking to apply these skills in a practical environment.Also I'm doing part time Graphic Designing.",
+  bio: "BSc (Hons) in IT student at the University of Kelaniya (Industrial Management). I am focused on Cybersecurity, Web Development, and creating responsive digital web applications. I enjoy solving complex problems, whether it's securing a network or crafting intuitive web interfaces, and I am looking to apply these skills in a practical environment. Also I am doing part-time Graphic Designing.",
   resumeSummary: "Aspiring Cyber Security Analyst and passionate IT student with hands-on experience in web development, database management, and emerging AI technologies. Eager to apply analytical problem-solving skills to real-world challenges while continuing to build robust, scalable applications.",
   location: "Kelaniya, Sri Lanka(Open to Remote)",
   email: "kaveeshavimukthi688@gmail.com",
