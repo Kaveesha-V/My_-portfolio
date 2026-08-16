@@ -23,11 +23,12 @@ export const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
     restDelta: 0.001,
   });
 
+  // Exactly sync node activation with line fill progress reaching each node
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
     setActiveNodes([
-      latest >= 0.05,
-      latest >= 0.45,
-      latest >= 0.85,
+      latest >= 0.0,  // Node 0 (University) - Start of line
+      latest >= 0.5,  // Node 1 (Bank Internship) - Middle of line
+      latest >= 0.95, // Node 2 (Freelance) - End of line
     ]);
   });
 
@@ -52,22 +53,23 @@ export const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
         {/* Vertical Timeline Container */}
         <div ref={containerRef} className="relative pl-10 sm:pl-14 space-y-12 ml-1 sm:ml-2">
           
-          {/* Static Dim Unfilled Track (Starts at Node 1 center, ends at Node 3 center) */}
+          {/* Static Dim Unfilled Track (Starts at Node 0 center top:0, ends at Node 2 center) */}
           <div 
             className="absolute left-[15px] sm:left-[23px] top-[38px] bottom-[38px] w-[2px] bg-white/10 pointer-events-none z-0 rounded-full"
           />
 
-          {/* Continuous Glowing Active Line Fill with Comet Head */}
-          <motion.div
-            style={{
-              scaleY,
-              transformOrigin: 'top',
-            }}
-            className="absolute left-[15px] sm:left-[23px] top-[38px] bottom-[38px] w-[2px] bg-[#88EC11] shadow-[0_0_10px_#88EC11] pointer-events-none z-0 rounded-full"
-          >
-            {/* Glowing Comet Head / Leading Tip */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-3.5 h-3.5 rounded-full bg-[#88EC11] shadow-[0_0_14px_4px_#88EC11]" />
-          </motion.div>
+          {/* Clean Glowing Fill Line (Zero offset from Node 0 center, no circular ball) */}
+          <div className="absolute left-[15px] sm:left-[23px] top-[38px] bottom-[38px] w-[2px] pointer-events-none z-0">
+            <motion.div
+              style={{
+                scaleY,
+                transformOrigin: 'top',
+                background: 'linear-gradient(to bottom, #88EC11 0%, #88EC11 85%, #c2ff6b 100%)',
+                boxShadow: '0 0 10px rgba(136, 236, 17, 0.7)'
+              }}
+              className="w-full h-full rounded-full"
+            />
+          </div>
 
           {/* Node 1: Education (University of Kelaniya) */}
           <motion.div
