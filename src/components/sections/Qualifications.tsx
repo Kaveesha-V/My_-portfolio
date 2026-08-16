@@ -32,9 +32,6 @@ export const Qualifications: React.FC<QualificationsProps> = ({ certifications }
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-12">
-          <span className="text-xs font-mono-code text-[#88EC11] tracking-widest uppercase mb-2 font-semibold">
-            // 05. Qualifications & Certifications
-          </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
             Certifications & <span className="text-[#88EC11]">Qualifications</span>
           </h2>

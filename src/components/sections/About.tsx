@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { AnimatedSection } from '../common/AnimatedSection';
 import type { Profile } from '../../types';
-import { Code2, MapPin, Mail, Sparkles, Palette, GraduationCap, ShieldCheck, Terminal } from 'lucide-react';
+import { Code2, MapPin, Mail, Sparkles, Palette, GraduationCap, ShieldCheck } from 'lucide-react';
 
 interface AboutProps {
   profile: Profile;
@@ -15,10 +15,6 @@ export const About: React.FC<AboutProps> = ({ profile }) => {
 
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#88EC11]/10 border border-[#88EC11]/40 text-[#88EC11] text-xs font-mono-code mb-3">
-            <Terminal className="w-3.5 h-3.5" />
-            <span className="uppercase tracking-widest">// 01. About Me</span>
-          </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white font-kumbh leading-tight">
             Engineering Precision Meets <span className="text-[#88EC11] drop-shadow-[0_0_20px_rgba(136,236,17,0.35)]">Creative Vision</span>
           </h2>

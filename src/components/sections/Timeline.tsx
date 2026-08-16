@@ -38,9 +38,6 @@ export const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <span className="text-xs font-mono-code text-[#88EC11] tracking-widest uppercase mb-2 font-semibold">
-            // 04. Career & Academic Journey
-          </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white">
             Professional <span className="text-[#88EC11]">Experience & Education</span>
           </h2>

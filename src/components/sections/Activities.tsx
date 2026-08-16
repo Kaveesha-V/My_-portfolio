@@ -43,9 +43,6 @@ export const Activities: React.FC<ActivitiesProps> = ({ activities }) => {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-14">
-          <span className="text-xs font-mono-code text-[#88EC11] tracking-widest uppercase mb-2 font-semibold">
-            // 06. Leadership & Community
-          </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white">
             Volunteering & <span className="text-[#88EC11]">Extracurricular Activities</span>
           </h2>

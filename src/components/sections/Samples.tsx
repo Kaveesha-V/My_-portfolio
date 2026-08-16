@@ -24,9 +24,6 @@ export const Samples: React.FC<SamplesProps> = ({ samples }) => {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-12">
-          <span className="text-xs font-mono-code text-cyan-400 tracking-widest uppercase mb-2">
-            // 05. Creative Samples
-          </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
             Design & Video <span className="text-gradient-cyan">Gallery</span>
           </h2>

@@ -25,10 +25,7 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
 
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-12">
-          <span className="text-xs font-mono-code text-[#88EC11] tracking-widest uppercase mb-2 font-semibold">
-            // 03. Portfolio Showcase
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-white font-kumbh">
             Featured <span className="text-[#88EC11]">Projects & Architecture</span>
           </h2>
           <p className="text-sm text-slate-300 max-w-xl mt-3 font-jakarta">

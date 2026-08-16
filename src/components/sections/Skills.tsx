@@ -49,9 +49,6 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
 
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-12">
-          <span className="text-xs font-mono-code text-[#88EC11] tracking-widest uppercase mb-2 font-semibold">
-            // 02. Skills
-          </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white">
             Tech Stacks & <span className="text-[#88EC11]">Tools</span>
           </h2>
