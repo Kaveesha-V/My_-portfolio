@@ -53,7 +53,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
             // 02. Skills
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white">
-            Tech Stack & <span className="text-[#88EC11]">Tools</span>
+            Tech Stacks & <span className="text-[#88EC11]">Tools</span>
           </h2>
           <p className="text-sm text-slate-300 max-w-xl mt-3 font-jakarta">
             Handcrafted suite of modern frameworks, languages, databases, cybersecurity tools, and design software.
