@@ -2,23 +2,23 @@ import type { Profile, Skill, Project, Experience, SampleItem, Certification, Ac
 
 export const MOCK_PROFILE: Profile = {
   name: "Kaveesha Vimukthi",
-  title: "IT Undergraduate | Aspiring Cyber Security Analyst",
+  title: "BSc (Hons) in IT | Aspiring Cybersecurity Analyst(Digital Forensic)",
   avatarUrl: "/profile.jpg",
   animatedTaglines: [
-    "IT Undergraduate | Aspiring Cyber Security Analyst",
+    "BSc (Hons) in IT | Aspiring Cybersecurity Analyst(Digital Forensic)",
     "Exploring the World of Cybersecurity",
-    "AI Enthusiast",
-    "Crafting High-Performance User Interfaces",
-    "Graphic Designer"
+    "Web Developer & Problem Solver",
+    "Graphic Designer & Video Editor",
+    "2D Game Developer"
   ],
-  bio: "BSc (Hons) in IT student at the University of Kelaniya (Industrial Management). I am focused on Cybersecurity, Web Development, and creating responsive digital web applications. I enjoy solving complex problems, whether it's securing a network or crafting intuitive web interfaces, and I am looking to apply these skills in a practical environment. Also I am doing part-time Graphic Designing.",
-  resumeSummary: "Aspiring Cyber Security Analyst and passionate IT student with hands-on experience in web development, database management, and emerging AI technologies. Eager to apply analytical problem-solving skills to real-world challenges while continuing to build robust, scalable applications.",
-  location: "Kelaniya, Sri Lanka(Open to Remote)",
+  bio: "BSc (Hons) in IT student at the University of Kelaniya (Industrial Management) . I am focused on Cybersecurity and Web Development and still learning more details of Java, C++ , and SQL. I enjoy solving complex problems, whether it's securing a network or coding game logic, and I’m looking to apply these skills in a practical environment.",
+  resumeSummary: "BSc (Hons) in IT student at the University of Kelaniya (Industrial Management) . I am focused on Cybersecurity and Web Development and still learning more details of Java, C++ , and SQL. I enjoy solving complex problems, whether it's securing a network or coding game logic, and I’m looking to apply these skills in a practical environment.",
+  location: "No 60LA 1 ,Dambagahawela , Pallebedda",
   email: "kaveeshavimukthi688@gmail.com",
   socials: {
     github: "https://github.com/Kaveesha-V",
-    linkedin: "https://www.linkedin.com/in/kaveesha-vimukthi-544a08352",
-    whatsapp: "https://wa.me/94765502806",
+    linkedin: "https://bit.ly/kaveeshavimukthi_LinkedIn",
+    whatsapp: "https://wa.me/94702293667",
     email: "mailto:kaveeshavimukthi688@gmail.com"
   },
   stats: {
@@ -416,6 +416,15 @@ export const MOCK_ACTIVITIES: Activity[] = [
   },
   {
     id: 'act-5',
+    title: 'Public Relation Coordinator',
+    role: 'Public Relation Coordinator',
+    organization: 'Rota Tomorrow Project- Team 06 | Rotaract UOK',
+    category: 'Leadership & Rotaract',
+    description: 'Coordinating public relations, outreach communications, and community engagement for Rota Tomorrow Project Team 06.',
+    highlights: ['Public Relations Strategy', 'Community Outreach', 'Rotaract Engagement']
+  },
+  {
+    id: 'act-6',
     title: 'School Badminton Team Player',
     role: 'Team Player & Athlete',
     organization: 'School Athletics & Badminton Team',

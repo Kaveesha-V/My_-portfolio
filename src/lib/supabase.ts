@@ -240,16 +240,17 @@ Feel free to check out the Samples section to view his full design gallery!`;
 
   if (query.includes('volunteer') || query.includes('extracurricular') || query.includes('rotaract') || query.includes('violin') || query.includes('badminton') || query.includes('talent') || query.includes('media unit')) {
     return `Kaveesha's Volunteering & Extracurricular Activities include:
+• **Co-Director**: Digital Media Avenue | Rotaract UOK
+• **Member**: Media Unit | IMSSA UOK
+• **Public Relation Coordinator**: Rota Tomorrow Project- Team 06 | Rotaract UOK
 • **Visharadha in Violin Performance**: Sangeeth Visharad qualification for playing violin.
-• **Co-Director of Digital Media Avenue**: Rotaract Club of University of Kelaniya, leading digital media strategy & branding.
 • **Talent Show 2025 Event Coordinator**: Planned and coordinated the department Talent Show 2025 event.
-• **Member of Department Media Unit**: Creating promotional graphics, video edits, and university media coverage.
 • **School Badminton Team Player**: Represented school in competitive badminton tournaments.`;
   }
 
-  if (query.includes('contact') || query.includes('hire') || query.includes('email') || query.includes('reach') || query.includes('location')) {
-    return `You can reach out directly via the Contact form below or email Kaveesha at **kaveeshavimukthi688@gmail.com**. Kaveesha is based in Kelaniya, Sri Lanka and is open to Cyber Security, Web Development, and Freelance Graphic Design / Video Editing roles!`;
+  if (query.includes('contact') || query.includes('hire') || query.includes('email') || query.includes('phone') || query.includes('reach') || query.includes('location')) {
+    return `You can reach out directly via the Contact form below, email Kaveesha at **kaveeshavimukthi688@gmail.com**, or call/WhatsApp at **+94 702293667**. Kaveesha is located at **No 60LA 1 ,Dambagahawela , Pallebedda** and is pursuing BSc (Hons) in IT at the University of Kelaniya!`;
   }
 
-  return `Hello! I'm Kaveesha Vimukthi's AI assistant. Kaveesha is an IT Undergraduate at the University of Kelaniya focusing on Cyber Security, Web Development, Game Development (C++/Raylib), and Graphic Design & Video Editing. How can I help you learn more about his background, projects, or skills?`;
+  return `Hello! I'm Kaveesha Vimukthi's AI assistant. Kaveesha is a BSc (Hons) in IT student at the University of Kelaniya focusing on Cyber Security, Web Development, Game Development (C++/Raylib), and Graphic Design & Video Editing. How can I help you learn more about his background, projects, or skills?`;
 }
