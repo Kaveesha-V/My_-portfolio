@@ -102,3 +102,14 @@ export interface Certification {
   skills?: string[];
   description?: string;
 }
+
+export interface Activity {
+  id: string;
+  title: string;
+  role: string;
+  organization: string;
+  period?: string;
+  category: string;
+  description: string;
+  highlights?: string[];
+}

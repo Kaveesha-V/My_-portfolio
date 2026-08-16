@@ -1,4 +1,4 @@
-import type { Profile, Skill, Project, Experience, SampleItem, Certification } from '../types';
+import type { Profile, Skill, Project, Experience, SampleItem, Certification, Activity } from '../types';
 
 export const MOCK_PROFILE: Profile = {
   name: "Kaveesha Vimukthi",
@@ -371,5 +371,56 @@ export const MOCK_CERTIFICATIONS: Certification[] = [
     description: 'Connect and Protect: Networks and Network Security is the third course in the Google Cybersecurity Professional Certificate program. This course builds on the foundation established in the first two courses to equip learners with the knowledge and skills needed to design, implement, and manage secure network environments',
     skills: ['Google', 'Vulnerability Assessment', 'Threat Analysis', 'Cybersecurity'],
     linkedinUrl: 'https://www.linkedin.com/in/your-profile/'
+  }
+];
+
+export const MOCK_ACTIVITIES: Activity[] = [
+  {
+    id: 'act-1',
+    title: 'Visharadha for Playing Violin',
+    role: 'Sangeeth Visharad (Violin)',
+    organization: 'Classical Music & Instrumental Arts',
+    category: 'Music & Performing Arts',
+    description: 'Achieved Visharadha qualification for playing the violin, demonstrating advanced mastery in classical music theory, pitch control, and solo recitals.',
+    highlights: ['Sangeeth Visharad Qualification', 'Violin Solo Performance & Recitals', 'Advanced Classical Music Theory']
+  },
+  {
+    id: 'act-2',
+    title: 'Co-Director of Digital Media Avenue',
+    role: 'Co-Director',
+    organization: 'Rotaract Club of University of Kelaniya',
+    period: '2024 — Present',
+    category: 'Leadership & Rotaract',
+    description: 'Leading digital media strategy, creative graphic content, social media campaigns, and video promotion across major Rotaract club initiatives.',
+    highlights: ['Digital Branding & Campaign Strategy', 'Rotaract Media Leadership', 'Graphic Design & Video Direction']
+  },
+  {
+    id: 'act-3',
+    title: 'Talent Show 2025 Event Coordinator',
+    role: 'Event Coordinator',
+    organization: 'Department of Industrial Management, University of Kelaniya',
+    period: '2025',
+    category: 'Event Leadership',
+    description: 'Coordinated and organized the Talent Show 2025 event at the department, managing stage operations, promotional graphics, and participant flows.',
+    highlights: ['Event Planning & Stage Management', 'Promotional Campaign Execution', 'Cross-Team Coordination']
+  },
+  {
+    id: 'act-4',
+    title: 'Member of Department Media Unit',
+    role: 'Active Media Member',
+    organization: 'Department Media Unit, University of Kelaniya',
+    period: '2024 — Present',
+    category: 'Media Production',
+    description: 'Actively contributing to official department media coverage, producing promotional flyers, highlight video edits, and photography for university events.',
+    highlights: ['Official Department Media Coverage', 'Promotional Graphics & Flyers', 'Video Highlights & Photography']
+  },
+  {
+    id: 'act-5',
+    title: 'School Badminton Team Player',
+    role: 'Team Player & Athlete',
+    organization: 'School Athletics & Badminton Team',
+    category: 'Sports & Athletics',
+    description: 'Represented school in competitive badminton tournaments, cultivating athletic endurance, strategic thinking, discipline, and sportsmanship.',
+    highlights: ['Interschool Tournament Representation', 'Athletic Fitness & Agility', 'Teamwork & Strategic Play']
   }
 ];

@@ -1,6 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
-import { MOCK_PROFILE, MOCK_PROJECTS, MOCK_SKILLS, MOCK_EXPERIENCE, MOCK_CERTIFICATIONS } from '../data/mockData';
-import type { Profile, Project, Skill, Experience, ContactMessage, ChatMessage, Certification } from '../types';
+import { MOCK_PROFILE, MOCK_PROJECTS, MOCK_SKILLS, MOCK_EXPERIENCE, MOCK_CERTIFICATIONS, MOCK_ACTIVITIES } from '../data/mockData';
+import type { Profile, Project, Skill, Experience, ContactMessage, ChatMessage, Certification, Activity } from '../types';
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
@@ -122,6 +122,20 @@ export async function getCertifications(): Promise<Certification[]> {
   return MOCK_CERTIFICATIONS;
 }
 
+export async function getActivities(): Promise<Activity[]> {
+  if (supabase) {
+    try {
+      const { data, error } = await supabase.from('activities').select('*');
+      if (!error && data && data.length > 0) {
+        return data as Activity[];
+      }
+    } catch (e) {
+      console.warn('Supabase activities fetch failed:', e);
+    }
+  }
+  return MOCK_ACTIVITIES;
+}
+
 export async function sendContactMessage(msg: ContactMessage): Promise<{ success: boolean; error?: string }> {
   // 1. Web3Forms Free Instant Mobile Notification Service (Delivers to kaveeshavimukthi688@gmail.com)
   const web3FormsKey = import.meta.env.VITE_WEB3FORMS_KEY || 'eb2a6fba-a03d-45bc-8ad4-e82369e79ae9';
@@ -222,6 +236,15 @@ You can explore interactive details and technical highlights in the Projects Sho
 • **13 Graphic Design Projects**: Posters (Harithasvara 2.0, Registration), banners, podcast covers, and branding concepts.
 • **3 Motion Video Edits**: VisionX video edit, Wedding Invitation motion clip, and Birthday Reel edit.
 Feel free to check out the Samples section to view his full design gallery!`;
+  }
+
+  if (query.includes('volunteer') || query.includes('extracurricular') || query.includes('rotaract') || query.includes('violin') || query.includes('badminton') || query.includes('talent') || query.includes('media unit')) {
+    return `Kaveesha's Volunteering & Extracurricular Activities include:
+• **Visharadha in Violin Performance**: Sangeeth Visharad qualification for playing violin.
+• **Co-Director of Digital Media Avenue**: Rotaract Club of University of Kelaniya, leading digital media strategy & branding.
+• **Talent Show 2025 Event Coordinator**: Planned and coordinated the department Talent Show 2025 event.
+• **Member of Department Media Unit**: Creating promotional graphics, video edits, and university media coverage.
+• **School Badminton Team Player**: Represented school in competitive badminton tournaments.`;
   }
 
   if (query.includes('contact') || query.includes('hire') || query.includes('email') || query.includes('reach') || query.includes('location')) {

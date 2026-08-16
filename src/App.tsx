@@ -8,11 +8,12 @@ import { Skills } from './components/sections/Skills';
 import { Projects } from './components/sections/Projects';
 import { Timeline } from './components/sections/Timeline';
 import { Qualifications } from './components/sections/Qualifications';
+import { Activities } from './components/sections/Activities';
 import { Contact } from './components/sections/Contact';
 import { Footer } from './components/sections/Footer';
 import { ChatWidget } from './components/chat/ChatWidget';
-import { getProfile, getProjects, getSkills, getExperience, getCertifications } from './lib/supabase';
-import type { Profile, Project, Skill, Experience, Certification } from './types';
+import { getProfile, getProjects, getSkills, getExperience, getCertifications, getActivities } from './lib/supabase';
+import type { Profile, Project, Skill, Experience, Certification, Activity } from './types';
 import { Bot } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -22,6 +23,7 @@ export function App() {
   const [skills, setSkills] = useState<Skill[]>([]);
   const [experiences, setExperiences] = useState<Experience[]>([]);
   const [certifications, setCertifications] = useState<Certification[]>([]);
+  const [activities, setActivities] = useState<Activity[]>([]);
   const [chatOpen, setChatOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [theme, setTheme] = useState<'dark' | 'light'>(() => {
@@ -47,18 +49,20 @@ export function App() {
   useEffect(() => {
     async function loadData() {
       try {
-        const [profData, projData, skillData, expData, certData] = await Promise.all([
+        const [profData, projData, skillData, expData, certData, actData] = await Promise.all([
           getProfile(),
           getProjects(),
           getSkills(),
           getExperience(),
           getCertifications(),
+          getActivities(),
         ]);
         setProfile(profData);
         setProjects(projData);
         setSkills(skillData);
         setExperiences(expData);
         setCertifications(certData);
+        setActivities(actData);
       } catch (err) {
         console.error('Error loading portfolio data:', err);
       } finally {
@@ -107,6 +111,7 @@ export function App() {
         <Projects projects={projects} />
         <Timeline experiences={experiences} />
         <Qualifications certifications={certifications} />
+        <Activities activities={activities} />
         <Contact profile={profile} />
       </main>
 
