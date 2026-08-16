@@ -20,7 +20,7 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
     : projects.filter(p => p.category.toLowerCase().includes(selectedCategory.toLowerCase()) || p.tags.some(t => t.toLowerCase().includes(selectedCategory.toLowerCase())));
 
   return (
-    <AnimatedSection id="projects" className="py-24 relative bg-[#0b0b0c]">
+    <AnimatedSection id="projects" className="py-24 relative bg-transparent">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}

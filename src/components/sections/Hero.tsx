@@ -20,7 +20,7 @@ export const Hero: React.FC<HeroProps> = ({ profile, onOpenChat }) => {
   }, [profile.animatedTaglines]);
 
   return (
-    <section id="hero" className="relative min-h-[92vh] pt-28 pb-16 flex items-center justify-center overflow-hidden bg-[#0b0b0c]">
+    <section id="hero" className="relative min-h-[92vh] pt-28 pb-16 flex items-center justify-center overflow-hidden bg-transparent">
       {/* Background Neon Green Ambient Glow Orb */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-[#88EC11]/15 via-[#70E000]/10 to-transparent blur-[140px] pointer-events-none rounded-full" />
 

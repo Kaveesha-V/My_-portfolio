@@ -33,7 +33,7 @@ export const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
   });
 
   return (
-    <AnimatedSection id="experience" className="py-24 relative bg-[#0b0b0c]">
+    <AnimatedSection id="experience" className="py-24 relative bg-transparent">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

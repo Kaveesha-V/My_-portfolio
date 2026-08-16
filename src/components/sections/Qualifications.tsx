@@ -27,7 +27,7 @@ export const Qualifications: React.FC<QualificationsProps> = ({ certifications }
   };
 
   return (
-    <AnimatedSection id="qualifications" className="py-20 relative bg-[#0b0b0c]">
+    <AnimatedSection id="qualifications" className="py-20 relative bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

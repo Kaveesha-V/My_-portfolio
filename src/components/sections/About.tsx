@@ -10,7 +10,7 @@ interface AboutProps {
 
 export const About: React.FC<AboutProps> = ({ profile }) => {
   return (
-    <AnimatedSection id="about" className="py-24 relative bg-[#0b0b0c]">
+    <AnimatedSection id="about" className="py-24 relative bg-transparent">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}

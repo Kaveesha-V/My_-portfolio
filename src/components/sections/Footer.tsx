@@ -12,7 +12,7 @@ export const Footer: React.FC<FooterProps> = ({ profile }) => {
   };
 
   return (
-    <footer className="relative bg-[#0b0b0c] border-t border-white/10 pt-12 pb-8 overflow-hidden">
+    <footer className="relative bg-transparent border-t border-white/10 pt-12 pb-8 overflow-hidden">
 
       {/* Top Neon Green Accent Line */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#88EC11] to-transparent opacity-80" />

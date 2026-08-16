@@ -58,7 +58,7 @@ export const Contact: React.FC<ContactProps> = ({ profile }) => {
   };
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden bg-[#0b0b0c]">
+    <section id="contact" className="py-24 relative overflow-hidden bg-transparent">
       {/* Background Decorative Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#88EC11]/10 rounded-full blur-[140px] pointer-events-none -z-10" />
 
