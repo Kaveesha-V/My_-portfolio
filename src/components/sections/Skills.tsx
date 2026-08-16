@@ -95,10 +95,10 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="glass-card p-6 rounded-2xl border border-white/10 flex flex-col justify-between group hover:border-[#88EC11]/40 bg-[#18181c]"
+                className="glass-card p-4 sm:p-5 rounded-2xl border border-white/10 flex flex-col justify-between group hover:border-[#88EC11]/40 bg-[#18181c]"
               >
                 <div>
-                  <div className="flex items-center gap-3.5 mb-4">
+                  <div className="flex items-center gap-3.5">
                     <div className="p-2.5 rounded-xl bg-[#0b0b0c] border border-white/10 flex items-center justify-center shrink-0 group-hover:border-[#88EC11]/60 group-hover:scale-110 group-hover:shadow-[0_0_18px_rgba(136,236,17,0.35)] transition-all duration-300 overflow-hidden">
                       {getSkillLogo(skill.name)}
                     </div>
@@ -111,10 +111,6 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
                       </span>
                     </div>
                   </div>
-
-                  <p className="text-xs text-slate-300 leading-relaxed font-jakarta">
-                    {skill.description}
-                  </p>
                 </div>
               </motion.div>
             ))}
