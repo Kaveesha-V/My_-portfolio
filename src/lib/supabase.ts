@@ -248,8 +248,8 @@ Feel free to check out the Samples section to view his full design gallery!`;
 • **School Badminton Team Player**: Represented school in competitive badminton tournaments.`;
   }
 
-  if (query.includes('contact') || query.includes('hire') || query.includes('email') || query.includes('phone') || query.includes('reach') || query.includes('location')) {
-    return `You can reach out directly via the Contact form below, email Kaveesha at **kaveeshavimukthi688@gmail.com**, or call/WhatsApp at **+94 702293667**. Kaveesha is located at **No 60LA 1 ,Dambagahawela , Pallebedda** and is pursuing BSc (Hons) in IT at the University of Kelaniya!`;
+  if (query.includes('contact') || query.includes('hire') || query.includes('email') || query.includes('phone') || query.includes('reach') || query.includes('location') || query.includes('whatsapp')) {
+    return `You can reach out directly via the Contact form below, email Kaveesha at **kaveeshavimukthi688@gmail.com**, or message on WhatsApp at **+94 76 550 2806** (0765502806). Kaveesha is located at **No 60LA 1 ,Dambagahawela , Pallebedda** and is pursuing BSc (Hons) in IT at the University of Kelaniya!`;
   }
 
   return `Hello! I'm Kaveesha Vimukthi's AI assistant. Kaveesha is a BSc (Hons) in IT student at the University of Kelaniya focusing on Cyber Security, Web Development, Game Development (C++/Raylib), and Graphic Design & Video Editing. How can I help you learn more about his background, projects, or skills?`;
