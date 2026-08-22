@@ -23,7 +23,7 @@ export const MOCK_PROFILE: Profile = {
   },
   stats: {
     yearsExperience: 1,
-    projectsCompleted: 5,
+    projectsCompleted: 6,
     techStackCount: 19,
     codeCommits: 100
   }
@@ -61,6 +61,24 @@ export const MOCK_SKILLS: Skill[] = [
 ];
 
 export const MOCK_PROJECTS: Project[] = [
+  {
+    id: 'proj-where-am-i',
+    title: '"Where Am I?" - Android GPS Locator',
+    description: 'A real-time native Android location tracker built with Google Play Services Fused Location Provider, dynamic runtime permissions, and Geocoder reverse-geocoding.',
+    longDescription: 'A native Android mobile application engineered to accurately retrieve and display real-time device coordinates (latitude, longitude, accuracy, and timestamp) using Google Play Services Fused Location Provider. Features dynamic runtime permission flows (ACCESS_FINE_LOCATION / COARSE), fault-tolerant permission denial handling, Geocoder reverse-geocoding for street addresses, and hardware sensor testing on Android Studio Emulator.',
+    tags: ['Android', 'Java', 'Fused Location API', 'GPS & Geocoder', 'Runtime Permissions', 'Mobile App'],
+    category: 'Mobile App',
+    imageUrl: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1000&q=80',
+    githubUrl: 'https://github.com/Kaveesha-V/Where_am_I.git',
+    featured: true,
+    architectureHighlights: [
+      'One-time high-accuracy location fetching via Google Play Services Fused Location Provider API',
+      'Runtime permission handling (ACCESS_FINE_LOCATION & ACCESS_COARSE_LOCATION) with graceful denial recovery',
+      'Real-time coordinate parsing & Geocoder reverse-geocoding for readable street addresses',
+      'Mock location emulation testing via Android Studio Extended Controls'
+    ],
+    metrics: '📍 Android SDK & Fused Location Provider | Real-Time GPS'
+  },
   {
     id: 'proj-sniffer',
     title: 'CLI Network Packet Sniffer',
@@ -161,21 +179,21 @@ export const MOCK_PROJECTS: Project[] = [
   },
   {
     id: 'proj-6',
-    title: 'Portfolio Website',
-    description: 'Developed responsive, scalable web applications featuring clean visual design, intuitive user interfaces, and optimized cross-device performance.',
-    longDescription: 'Detail-oriented developer skilled in building responsive, scalable web applications with clean visual design and optimal user experience.',
-    tags: ['CSS', 'React', 'git', 'Vercel', 'deno'],
+    title: 'Personal Portfolio Website',
+    description: 'Personal cyber security & developer portfolio built with React 19, TypeScript, Matrix digital rain background, and AI chatbot assistant.',
+    longDescription: 'High-performance personal developer portfolio built with React 19, TypeScript, Tailwind CSS, and HTML5 Canvas. Features dynamic Matrix digital rain and interactive connected constellation particle mesh, context-aware AI chatbot assistant, real-time contact notifications, responsive dark/light themes, and automated A4 resume PDF generation.',
+    tags: ['React 19', 'TypeScript', 'Tailwind CSS', 'Canvas API', 'Vite', 'Cyber Security'],
     category: 'Web',
     imageUrl: '/portfolio-screenshot.png',
-    featured: false,
+    githubUrl: 'https://github.com/Kaveesha-V/My_-portfolio.git',
+    featured: true,
     architectureHighlights: [
-      'Modern dark-mode UI layout featuring custom gradient typography, glowing CTA elements, and dynamic floating stats cards',
-      'Integrated interactive AI Assistant chatbot widget with dedicated header status and floating action access',
-      'Modular component structure with single-page section navigation and real-time availability status badge'
+      'Interactive HTML5 Canvas Matrix digital rain and mouse-responsive connected constellation particle mesh',
+      'Integrated AI Assistant chatbot widget with context-aware portfolio query processing',
+      'Modular single-page architecture with dynamic dark/light theme switching and automated resume PDF generator'
     ],
-    metrics: '⚡ Live Interactive AI Assistant & Modern Component Architecture'
+    metrics: '⚡ React 19, TypeScript, Canvas API & AI Assistant'
   },
-
 ];
 
 export const MOCK_EXPERIENCE: Experience[] = [
